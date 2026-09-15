@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation · Table Export for Confluence</title>
+  <link rel="icon" href="../icon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <img src="../icon.png" alt="">
+    <a href="../">Table Export for Confluence</a>
+    <nav>
+      <a href="./" aria-current="page">Documentation</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../security/">Security</a>
+      <a href="../impressum/">Legal notice</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>User guide</h1>
+    <p class="lead">Export tables from Confluence to Excel or CSV in three steps.</p>
+
+    <h2>Export tables in three steps</h2>
+    <ol>
+      <li>Open a Confluence page or blog post that contains tables.</li>
+      <li>Select <strong>•••</strong> (top right) → <strong>Apps</strong> → <strong>Export tables (Excel/CSV)</strong>.</li>
+      <li>Check the preview, then select the <strong>Export</strong> button at the bottom right.</li>
+    </ol>
+
+    <h2>Excel</h2>
+    <ul>
+      <li>All tables are selected by default. Uncheck the circle on a table to leave it out.</li>
+      <li>The file contains one sheet per table, named after the heading above the table (shortened to 31 characters, the Excel limit). Tables without a heading are called "Table 1", "Table 2" and so on.</li>
+      <li>Merged cells stay merged. Line breaks, special characters and emoji are kept.</li>
+      <li>Formulas are never executed: a cell like <code>=SUM(A1:A2)</code> is exported as text.</li>
+      <li>Clear numbers such as <code>12</code> or <code>-3.5</code> become numbers. Values that Excel would show differently stay text: leading zeros (<code>00123</code>), trailing zeros (<code>1.10</code>) and values like <code>1.234</code>, which means one thousand two hundred thirty-four in many languages.</li>
+    </ul>
+
+    <h2>CSV</h2>
+    <ul>
+      <li>Switch the format to <strong>CSV</strong>. The table in the preview is exported.</li>
+      <li><strong>Separator:</strong> <code>;</code> is what Excel expects in most European languages, <code>,</code> is the international standard. The app picks the right one for your Confluence language, and you can change it.</li>
+      <li>CSV files are saved as UTF-8 so special characters open correctly in Excel.</li>
+      <li>Cells that start with <code>=</code>, <code>+</code>, <code>-</code>, <code>@</code> or <code>|</code> get an apostrophe in front, so Excel does not run them as formulas. Plain numbers like <code>-5</code> are not changed.</li>
+      <li>CSV cannot store merged cells: the text of a merged cell appears in its first cell.</li>
+    </ul>
+
+    <h2>Keyboard</h2>
+    <p>These keys work while the table list on the left has focus. Esc works everywhere.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd></td><td>Move between tables</td></tr>
+          <tr><td><kbd>Home</kbd> <kbd>End</kbd></td><td>First or last table</td></tr>
+          <tr><td><kbd>Space</kbd></td><td>Include or exclude the table</td></tr>
+          <tr><td><kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd></td><td>Select all tables</td></tr>
+          <tr><td><kbd>Enter</kbd></td><td>Export</td></tr>
+          <tr><td><kbd>Esc</kbd></td><td>Close</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Troubleshooting</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>You see</th><th>What to do</th></tr></thead>
+        <tbody>
+          <tr><td>"No tables on this page"</td><td>Only real Confluence tables are exported. Tables inside images, attachments or embedded files cannot be read.</td></tr>
+          <tr><td>"Could not read this page"</td><td>You may not have permission to view the page, or Confluence is temporarily unavailable. Select Try again.</td></tr>
+          <tr><td>"License not active"</td><td>Ask your Confluence administrator to renew the app.</td></tr>
+          <tr><td>The menu item is missing</td><td>The app license may be inactive, or the app is not installed on this site.</td></tr>
+          <tr><td>The download does not start</td><td>Allow downloads for your Confluence site in your browser.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Privacy</h2>
+    <p>The page is read in your browser with your own permissions. Nothing is sent to or stored by the vendor. See the <a href="../privacy/">privacy policy</a>.</p>
+
+    <h2>Support</h2>
+    <p><a href="mailto:contact@toosolv.com">contact@toosolv.com</a>, answer within 3 business days.</p>
+  </main>
+
+  <footer>TooSolv Studio · <a href="mailto:contact@toosolv.com">contact@toosolv.com</a> · <a href="../impressum/">Impressum</a>
+    <p>Microsoft and Excel are trademarks of the Microsoft group of companies. Atlassian and Confluence are trademarks of Atlassian.</p></footer>
+</div>
+</body>
+</html>
