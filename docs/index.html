@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Documentation · Table Export for Confluence</title>
+  <meta name="description" content="User guide for Table Export for Confluence: export tables to Excel or CSV, sheet names, number rules, limits, keyboard and troubleshooting.">
   <link rel="icon" href="../icon.png">
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -12,7 +13,7 @@
   <header class="site">
     <img src="../icon.png" alt="">
     <a href="../">Table Export for Confluence</a>
-    <nav>
+    <nav aria-label="Main">
       <a href="./" aria-current="page">Documentation</a>
       <a href="../privacy/">Privacy</a>
       <a href="../security/">Security</a>
@@ -34,10 +35,11 @@
     <h2>Excel</h2>
     <ul>
       <li>All tables are selected by default. Uncheck the circle on a table to leave it out.</li>
-      <li>The file contains one sheet per table, named after the heading above the table (shortened to 31 characters, the Excel limit). Tables without a heading are called "Table 1", "Table 2" and so on.</li>
+      <li>The file contains one sheet per table. The sheet name comes from the title of the expand section or the heading above the table. The characters <code>[</code> <code>]</code> <code>:</code> <code>*</code> <code>?</code> <code>/</code> <code>\</code> are replaced, names are shortened to 31 characters (the Excel limit), and duplicate names get (2), (3) and so on. Tables without a name are called "Table 1", "Table 2" and so on, in your Confluence language.</li>
       <li>Merged cells stay merged. Line breaks, special characters and emoji are kept.</li>
       <li>Formulas are never executed: a cell like <code>=SUM(A1:A2)</code> is exported as text.</li>
-      <li>Clear numbers such as <code>12</code> or <code>-3.5</code> become numbers. Values that Excel would show differently stay text: leading zeros (<code>00123</code>), trailing zeros (<code>1.10</code>) and values like <code>1.234</code>, which means one thousand two hundred thirty-four in many languages.</li>
+      <li>Numbers become real Excel numbers in the format of your Confluence language: in German for example <code>1,5</code>, <code>1.234,56</code> and <code>12,5 %</code>, in English <code>1,234.56</code>. The decimals you see are kept. A column is converted only if all its cells below the header are numbers, so a column with text or references like "3,4" in a sentence stays text.</li>
+      <li>These values stay text: leading zeros (<code>00123</code>), <code>-0</code>, whole numbers with more than 11 digits (such as article or account numbers), currencies, dates and values like <code>1.234</code> or <code>1,234</code>, which mean different things in different languages.</li>
     </ul>
 
     <h2>CSV</h2>
@@ -45,8 +47,19 @@
       <li>Switch the format to <strong>CSV</strong>. The table in the preview is exported.</li>
       <li><strong>Separator:</strong> <code>;</code> is what Excel expects in most European languages, <code>,</code> is the international standard. The app picks the right one for your Confluence language, and you can change it.</li>
       <li>CSV files are saved as UTF-8 so special characters open correctly in Excel.</li>
-      <li>Cells that start with <code>=</code>, <code>+</code>, <code>-</code>, <code>@</code> or <code>|</code> get an apostrophe in front, so Excel does not run them as formulas. Plain numbers like <code>-5</code> are not changed.</li>
+      <li>Cells that start with <code>=</code>, <code>+</code>, <code>-</code>, <code>@</code>, <code>|</code>, a tab or a carriage return, or with the full-width forms of these characters, get an apostrophe in front, so spreadsheet programs do not treat them as formulas. Plain numbers like <code>-5</code> are not changed.</li>
       <li>CSV cannot store merged cells: the text of a merged cell appears in its first cell.</li>
+    </ul>
+
+    <h2>Limits</h2>
+    <ul>
+      <li>The preview shows the first 50 rows and 40 columns of a table. The exported file always contains all rows and columns.</li>
+      <li>An Excel cell holds at most 32,767 characters. Longer cells are cut in the Excel file. Use CSV for tables with very long cells.</li>
+      <li>Pages whose tables have more than 2 million cells in total cannot be exported.</li>
+      <li>A cell that spans several rows ends at the end of its table section (header or body), just as the browser shows it.</li>
+      <li>Tables that macros load later, such as Jira issue lists, Table Filter views or Confluence databases, are not part of the page content and are not exported. The app shows a note when it finds such macros.</li>
+      <li>The app exports the last published version of the page. Unpublished changes in the editor are not included.</li>
+      <li>Cells keep their text only: links become their link text, images and colours are not exported.</li>
     </ul>
 
     <h2>Keyboard</h2>
@@ -57,7 +70,7 @@
         <tbody>
           <tr><td><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd></td><td>Move between tables</td></tr>
           <tr><td><kbd>Home</kbd> <kbd>End</kbd></td><td>First or last table</td></tr>
-          <tr><td><kbd>Space</kbd></td><td>Include or exclude the table</td></tr>
+          <tr><td><kbd>Space</kbd></td><td>Include or exclude the table. In CSV mode, it shows the table in the preview.</td></tr>
           <tr><td><kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd></td><td>Select all tables</td></tr>
           <tr><td><kbd>Enter</kbd></td><td>Export</td></tr>
           <tr><td><kbd>Esc</kbd></td><td>Close</td></tr>
@@ -65,28 +78,35 @@
       </table>
     </div>
 
+    <h2>Languages</h2>
+    <p>The app follows your Confluence language. Supported languages: English, German, French, Spanish and Japanese.</p>
+
     <h2>Troubleshooting</h2>
     <div class="table-scroll">
       <table>
         <thead><tr><th>You see</th><th>What to do</th></tr></thead>
         <tbody>
-          <tr><td>"No tables on this page"</td><td>Only real Confluence tables are exported. Tables inside images, attachments or embedded files cannot be read.</td></tr>
-          <tr><td>"Could not read this page"</td><td>You may not have permission to view the page, or Confluence is temporarily unavailable. Select Try again.</td></tr>
+          <tr><td>"No tables on this page"</td><td>Only real Confluence tables are exported. Tables inside images, attachments or embedded files cannot be read, and tables loaded by macros (for example Jira issue lists) are not included.</td></tr>
+          <tr><td>"Could not read this page"</td><td>You may not have permission to view the page, or Confluence is temporarily unavailable. Select <strong>Try again</strong>.</td></tr>
           <tr><td>"License not active"</td><td>Ask your Confluence administrator to renew the app.</td></tr>
           <tr><td>The menu item is missing</td><td>The app license may be inactive, or the app is not installed on this site.</td></tr>
-          <tr><td>The download does not start</td><td>Allow downloads for your Confluence site in your browser.</td></tr>
+          <tr><td>The download does not start</td><td>Allow downloads for your Confluence site in your browser. If the app shows a <strong>Save file</strong> button (for example in Safari), select it to start the download.</td></tr>
         </tbody>
       </table>
     </div>
 
     <h2>Privacy</h2>
-    <p>The page is read in your browser with your own permissions. Nothing is sent to or stored by the vendor. See the <a href="../privacy/">privacy policy</a>.</p>
+    <p>The page is read in your browser with your own permissions. Nothing is sent to or stored by the vendor, and the app stores nothing in your browser. See the <a href="../privacy/">privacy policy</a>.</p>
 
     <h2>Support</h2>
-    <p><a href="mailto:contact@toosolv.com">contact@toosolv.com</a>, answer within 3 business days.</p>
+    <p>Email <a href="mailto:contact@toosolv.com">contact@toosolv.com</a>.</p>
+    <ul>
+      <li>Critical issues (app unusable or security): first response within 24 hours.</li>
+      <li>Other requests: within 3 business days.</li>
+    </ul>
   </main>
 
-  <footer>TooSolv Studio · <a href="mailto:contact@toosolv.com">contact@toosolv.com</a> · <a href="../impressum/">Impressum</a>
+  <footer>TooSolv Studio · <a href="mailto:contact@toosolv.com">contact@toosolv.com</a> · <a href="../impressum/">Legal notice (Impressum)</a>
     <p>Microsoft and Excel are trademarks of the Microsoft group of companies. Atlassian and Confluence are trademarks of Atlassian.</p></footer>
 </div>
 </body>

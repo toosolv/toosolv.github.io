@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Security policy · Table Export for Confluence</title>
+  <meta name="description" content="Security policy of Table Export for Confluence: how the app is built and how to report a vulnerability to TooSolv Studio.">
   <link rel="icon" href="../icon.png">
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -12,7 +13,7 @@
   <header class="site">
     <img src="../icon.png" alt="">
     <a href="../">Table Export for Confluence</a>
-    <nav>
+    <nav aria-label="Main">
       <a href="../docs/">Documentation</a>
       <a href="../privacy/">Privacy</a>
       <a href="./" aria-current="page">Security</a>
@@ -26,9 +27,9 @@
 
     <h2>How the app is built</h2>
     <ul>
-      <li>The app runs on Atlassian Forge ("Runs on Atlassian"). It has no backend and TooSolv Studio operates no servers.</li>
+      <li>The app is built on Atlassian Forge. It has no backend and TooSolv Studio operates no servers.</li>
       <li>It requests a single read permission (<code>read:page:confluence</code>) and reads pages with the permissions of the signed-in user.</li>
-      <li>Files are created in the browser. No page content leaves Atlassian and your device.</li>
+      <li>Files are created in the browser. Page content stays within Atlassian and your device.</li>
       <li>The app follows Atlassian's security requirements for Marketplace apps.</li>
     </ul>
 
@@ -37,13 +38,14 @@
 
     <h2>What happens next</h2>
     <ul>
-      <li>We confirm your report within 3 business days.</li>
+      <li>We confirm your report within 24 hours.</li>
       <li>We fix confirmed vulnerabilities within the timeframes of Atlassian's <a href="https://developer.atlassian.com/platform/marketplace/security-bugfix-policy/">Security Bug Fix Policy for Marketplace apps</a>.</li>
       <li>We tell you when the fix is released.</li>
     </ul>
   </main>
 
-  <footer>TooSolv Studio · <a href="mailto:contact@toosolv.com">contact@toosolv.com</a> · <a href="../impressum/">Impressum</a></footer>
+  <footer>TooSolv Studio · <a href="mailto:contact@toosolv.com">contact@toosolv.com</a> · <a href="../impressum/">Legal notice (Impressum)</a>
+    <p>Microsoft and Excel are trademarks of the Microsoft group of companies. Atlassian and Confluence are trademarks of Atlassian.</p></footer>
 </div>
 </body>
 </html>
