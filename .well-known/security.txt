@@ -1,0 +1,5 @@
+Contact: mailto:contact@toosolv.com
+Expires: 2027-09-15T00:00:00.000Z
+Policy: https://toosolv.github.io/security/
+Preferred-Languages: en, de
+Canonical: https://toosolv.github.io/.well-known/security.txt
