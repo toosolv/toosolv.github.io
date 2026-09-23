@@ -294,3 +294,78 @@ body > .wrap { flex: 1; display: flex; flex-direction: column; padding-bottom: 0
  .app-facts .product-summary dl div { padding-block: 10px; }
  .app-page .review-links .wide > .app-visual { max-width: 680px; }
 }
+
+/* Editorial product presentation, shared by future app pages. */
+.app-page { background: #f8fafd; }
+.app-page .topbar { background: #fff; }
+.app-page .product-head { margin-top: 28px; padding: 30px 40px 40px; background: #11243b; border-radius: 24px; color: #fff; }
+.app-page .product-head .crumb { margin-bottom: 36px; color: #b4c4d7; font-size: 12px; }
+.app-page .product-head .crumb a { color: #b4c4d7; }
+.app-page .product-overview { gap: 48px; }
+.app-page .product-title > img { width: 60px; height: 60px; border-radius: 14px; margin-bottom: 20px; }
+.app-page .product-title .label { color: #96bfff; font-size: 11px; letter-spacing: .12em; }
+.app-page .product-title h1 { font-size: clamp(36px, 4.2vw, 64px); line-height: 1.06; letter-spacing: -.045em; margin-bottom: 20px; }
+.app-page .product-title h1 span { color: #b6d3ff; }
+.app-page .product-title .lead { color: #d0dbe7; font-size: 17px; max-width: 49ch; }
+.app-page .product-actions { margin-top: 28px; gap: 18px; }
+.app-page .primary-link { display: inline-flex; gap: 16px; align-items: center; border-radius: 8px; background: #fff; color: #11243b; padding: 12px 17px; font-size: 14px; }
+.app-page .primary-link:hover { background: #dfebff; }
+.app-page .plain-link { color: #fff; font-size: 14px; text-underline-offset: 5px; }
+.app-page .plain-link:hover { text-decoration: underline; }
+.app-page .product-head .app-visual-frame { border: 1px solid #526376; border-radius: 16px; }
+.app-page .product-head .app-visual figcaption { color: #b4c4d7; font-size: 12px; }
+.app-page .app-facts { padding: 0 24px; }
+.app-page .app-facts .product-summary { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; padding: 22px 0; }
+.app-page .app-facts .product-summary dl div { border-top: 0; padding: 0; justify-content: center; gap: 16px; font-size: 14px; }
+.app-page .app-facts .product-summary dl div + div { border-left: 1px solid var(--line); }
+.app-page .product-details { padding-block: 64px; border: 0; background: transparent; }
+.feature-heading { display: flex; justify-content: space-between; gap: 32px; align-items: end; margin-bottom: 28px; }
+.feature-heading h2 { font-size: clamp(28px, 3vw, 40px); letter-spacing: -.035em; margin: 0; }
+.feature-heading > p { color: var(--muted); max-width: 30ch; margin: 0; }
+.app-page .feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.app-page .feature-grid article, .app-page .feature-grid article + article { padding: 28px; border-radius: 14px; border: 1px solid #dce4ee; min-height: 230px; }
+.app-page .feature-grid .feature-export { grid-column: span 2; background: #eaf2ff; border-color: #cfdef4; }
+.app-page .feature-grid .feature-forge { grid-column: span 2; background: #eef3f7; }
+.feature-index { display: block; font-size: 10px; font-weight: 700; letter-spacing: .13em; color: #496785; margin-bottom: 20px; }
+.feature-grid h3 { font-size: 23px; line-height: 1.2; letter-spacing: -.025em; margin: 0 0 12px; }
+.feature-grid p { max-width: 53ch; }
+.format-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
+.format-flow span { padding: 10px 16px; border: 1px solid #c8d8eb; border-radius: 7px; background: white; font-size: 13px; font-weight: 650; }
+.format-flow .format-xlsx { color: #13794f; border-color: #a0d3bd; background: #e3f5ec; }
+.format-flow .format-csv { color: #1553a5; }
+.structure-preview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; width: 126px; margin-top: 22px; }
+.structure-preview i { height: 17px; background: #dce9fa; border-radius: 3px; }
+.structure-preview i:first-child { grid-column: span 2; background: #7fa9e6; }
+.feature-link { display: inline-flex; gap: 18px; margin-top: 24px; text-decoration: none; font-size: 14px; font-weight: 650; }
+.feature-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.app-page .review-links { padding-block: 0 64px; }
+.app-page .review-links > .wide { padding: 32px; background: white; border: 1px solid var(--line); border-radius: 20px; gap: 44px; }
+.app-page .app-resources h2 { font-size: clamp(28px, 3vw, 38px); line-height: 1.12; }
+.app-page .review-links a { grid-template-columns: 130px 1fr; gap: 16px; font-size: 14px; }
+.app-page .review-links a:hover { color: var(--blue); }
+.app-page .site-footer { background: #fff; }
+@media(max-width: 900px) {
+ .app-page .product-head { padding: 24px; }
+ .app-page .product-overview { gap: 28px; }
+ .app-page .app-facts .product-summary dl { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+ .app-page .app-facts .product-summary dl div { flex-direction: column; text-align: center; gap: 2px; }
+ .app-page .app-facts dd { text-align: center; }
+ .app-page .feature-grid { grid-template-columns: 1fr 1fr; }
+ .app-page .feature-grid .feature-export, .app-page .feature-grid .feature-forge { grid-column: auto; }
+ .feature-heading { align-items: start; }
+ .feature-heading > p { display: none; }
+ .app-page .review-links > .wide { padding: 24px; }
+}
+@media(max-width: 600px) {
+ .app-page .product-head { margin-top: 16px; padding: 20px; border-radius: 16px; }
+ .app-page .product-head .crumb { margin-bottom: 28px; font-size: 11px; }
+ .app-page .product-title h1 { font-size: 36px; }
+ .app-page .product-title .lead { font-size: 15px; }
+ .app-page .app-facts { padding-inline: 0; }
+ .app-page .app-facts .product-summary dl div { font-size: 11px; }
+ .app-page .feature-grid { grid-template-columns: 1fr; }
+ .app-page .feature-grid article, .app-page .feature-grid article + article { min-height: 0; padding: 24px; }
+ .app-page .product-details { padding-block: 40px; }
+ .app-page .review-links > .wide { padding: 20px; }
+ .app-page .review-links a { grid-template-columns: 1fr; gap: 4px; }
+}
