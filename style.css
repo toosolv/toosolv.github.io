@@ -276,8 +276,8 @@ body > .wrap { flex: 1; display: flex; flex-direction: column; padding-bottom: 0
 .app-visual { margin: 0; min-width: 0; }
 .app-visual-frame { position: relative; overflow: hidden; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); }
 .app-visual .illustration { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
-.ai-image-label { position: absolute; right: 12px; bottom: 12px; width: 32px; height: 32px; overflow: hidden; border-radius: 50%; background: #000; box-shadow: 0 0 0 2px white; }
-.ai-image-label img { position: absolute; width: 50px; height: auto; max-width: none; left: -8px; top: -9px; }
+.ai-image-label { position: absolute; right: 8px; bottom: 8px; width: 16px; height: 16px; overflow: hidden; border-radius: 50%; background: #000; box-shadow: 0 0 0 1px white; }
+.ai-image-label img { position: absolute; width: 25px; height: auto; max-width: none; left: -4px; top: -4.5px; }
 .app-visual figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; }
 .app-facts { padding-bottom: 32px; }
 .app-facts .product-summary { padding: 20px 24px; }
