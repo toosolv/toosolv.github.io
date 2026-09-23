@@ -183,3 +183,6 @@ body > .wrap { flex: 1; display: flex; flex-direction: column; padding-bottom: 0
  .product-summary { padding: 20px; }
  .details-grid article, .details-grid article + article { padding: 22px; }
 }
+
+.home-main { display: flex; flex-direction: column; }
+.home-main > .projects-block { flex: 1; }
