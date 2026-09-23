@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'self'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <title>TooSolv Studio · Business software</title>
   <meta name="description" content="TooSolv Studio is an independent software studio. Explore our projects and products.">
   <link rel="icon" href="toosolv-studio.png?v=20260923b">
-  <link rel="stylesheet" href="style.css?v=20260923d">
+  <link rel="stylesheet" href="style.css?v=20260923e">
+  <script src="/directory.js?v=20260923e" defer></script>
 </head>
-<body>
+<body class="directory-page">
 <header class="topbar">
   <div class="wide">
     <a class="brand" href="./" aria-label="TooSolv Studio home"><img src="toosolv-studio.png?v=20260923b" alt=""><span>TooSolv Studio</span></a>
@@ -48,5 +49,9 @@
 </main>
 
 <footer class="site-footer"><div class="footer-inner"><span class="copyright">© 2026 TooSolv Studio</span><nav class="footer-links" aria-label="Footer"><a href="/docs/">Documentation</a><a href="/privacy/">Privacy</a><a href="/security/">Security</a><a href="/impressum/">Legal notice</a><a href="/connect/">Connect users</a><a href="mailto:contact@toosolv.com">Contact</a></nav></div></footer>
+<dialog class="more-dialog" aria-labelledby="more-title">
+  <div class="dialog-heading"><h2 id="more-title">More projects</h2><button type="button" class="dialog-close" aria-label="Close" autofocus>×</button></div>
+  <div class="dialog-items"></div>
+</dialog>
 </body>
 </html>
