@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
   <title>Privacy policy · Table Export for Confluence</title>
   <meta name="description" content="Privacy policy of Table Export for Confluence by TooSolv Studio: the app processes page content in your browser and stores no data.">
   <link rel="icon" href="../icon.png">
@@ -12,7 +14,7 @@
 <div class="wrap">
   <header class="site">
     <img src="../icon.png" alt="">
-    <a href="../">Table Export for Confluence</a>
+    <a href="../projects/atlassian/table-export-for-confluence/">Table Export for Confluence</a>
     <nav aria-label="Main">
       <a href="../docs/">Documentation</a>
       <a href="./" aria-current="page">Privacy</a>
@@ -23,7 +25,7 @@
 
   <main>
     <h1>Privacy policy</h1>
-    <p class="lead">Last updated: 15 September 2026</p>
+    <p class="lead">Last updated: 17 September 2026</p>
 
     <h2>Who we are</h2>
     <p>Table Export for Confluence ("the app") is provided by TooSolv Studio, Ryan-Jamil Rezgaoui (postal address in our <a href="../impressum/">legal notice</a>). Contact: <a href="mailto:contact@toosolv.com">contact@toosolv.com</a></p>
@@ -35,17 +37,33 @@
     <ul>
       <li>When you open "Export tables" on a Confluence page, the app reads that page's content through Atlassian's API with <strong>your own permissions</strong>. It can only read what you can already see.</li>
       <li>The tables are turned into an Excel or CSV file <strong>inside your browser</strong> and downloaded to your device.</li>
-      <li>No page content, personal data or usage data is sent to TooSolv Studio or to any third party. TooSolv Studio operates no servers for this app.</li>
+      <li>No page content and no personal data is sent to TooSolv Studio or to any third party. TooSolv Studio operates no servers for this app. The only thing we receive is the counters described below under "Cookies, tracking, analytics".</li>
+      <li>If an error occurs, the app shows a short diagnostic line: an error code, the app version, the identifier of the Confluence page and your language setting. It offers to copy that line to your clipboard. Whether you send it to us is your decision. If you do, we handle it like any other support message.</li>
+      <li>If you select <strong>Help</strong> in an error message, your browser opens our documentation page on this website. Nothing about your Confluence page is sent with it. What the web host logs is described under "This website" below.</li>
+      <li>Forge gives app vendors access to the app logs of the sites where their app is installed, and that sharing is switched on by default. This app writes no log output at all, so there is nothing in those logs for us to see. Your administrator can switch log sharing off at any time at admin.atlassian.com under Apps, Connected apps.</li>
     </ul>
 
     <h2>Data stored in your browser</h2>
-    <p>None. The app stores nothing in your browser: no local storage, no cookies. The exported file is saved to your device only when you select Export.</p>
+    <p>None. The app stores nothing in your browser: no local storage, no cookies. The exported file is saved to your device only when you select Export. The only time the app touches your device beyond that is the clipboard, and only when you select "Copy details" yourself.</p>
 
     <h2>Atlassian</h2>
     <p>The app is hosted and run by Atlassian as part of Confluence Cloud. Atlassian's processing of your data is governed by <a href="https://www.atlassian.com/legal/privacy-policy">Atlassian's own privacy policy</a>.</p>
 
     <h2>Cookies, tracking, analytics</h2>
-    <p>The app sets no cookies and uses no tracking or analytics.</p>
+    <p>The app sets no cookies and does not track you. It does keep eight simple counters, one for each of these events, so that we can tell whether the app is working for our customers:</p>
+    <ul>
+      <li>a page was read and had tables</li>
+      <li>a page was read and had no tables</li>
+      <li>opening the page did not work</li>
+      <li>an Excel file was created</li>
+      <li>a CSV file was created</li>
+      <li>creating a file did not work</li>
+      <li>a table was too large to export</li>
+      <li>the app hit an unexpected error and showed you a failure message</li>
+    </ul>
+    <p>That is the whole list. What the app sends is a number and nothing else: no page content, no table or file names, no page or space identifiers, no error text, and nothing about who you are.</p>
+    <p>To be precise about the rest: the counters are collected by Atlassian's Forge platform, and the platform itself adds the site the app is installed on, the app version and the time. So in Atlassian's developer console we can see that a site exported something, and roughly when, but never what, from which page, or by whom. Atlassian shows us these counts for the last 14 days only. We consider them non-personal data, because nothing in them points to an individual; should they ever be regarded as personal data in your case, our legal basis is Art. 6(1)(f) GDPR, our legitimate interest in knowing whether the software we sell is working.</p>
+    <p>Your Confluence administrator can switch the counters off for your whole Atlassian site at any time: go to admin.atlassian.com, select the site, select Apps, then Connected apps, choose this app, and in the Details tab turn off "Custom metrics access". The app works exactly the same either way.</p>
 
     <h2>License and billing data from Atlassian</h2>
     <p>When your organization buys or evaluates the app, Atlassian sells it on our behalf and gives us license and sales reports. These can contain the name of your organization and the name and email address of the billing and technical contacts. We use this data only to manage licenses, answer questions and meet our accounting duties. Legal basis: Art. 6(1)(b) GDPR (contract) and Art. 6(1)(c) GDPR (legal retention duties). We keep it for as long as the license exists and afterwards for as long as commercial and tax law requires (up to 10 years).</p>
