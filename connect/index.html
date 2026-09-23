@@ -1,1 +1,131 @@
-Temporary placeholder
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Your table exporter runs on Connect · Table Export for Confluence</title>
+  <meta name="description" content="What Atlassian Connect end of support means for table export apps in Confluence Cloud, how to check whether yours is affected, and what a move costs.">
+  <link rel="icon" href="../icon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <img src="../icon.png" alt="">
+    <a href="../projects/atlassian/table-export-for-confluence/">Table Export for Confluence</a>
+    <nav aria-label="Main">
+      <a href="../docs/">Documentation</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../security/">Security</a>
+      <a href="../impressum/">Legal notice</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Your table export app runs on Connect. What that means.</h1>
+    <p class="lead">Atlassian is retiring the Connect framework. If your Confluence admin has
+      started seeing warnings about installed apps, this page explains what is actually
+      happening, how to check your own site, and what a move would involve.</p>
+
+    <p>We make a table export app ourselves, so read this with that in mind. Everything below is
+      taken from Atlassian's own announcements and linked so you can check it.</p>
+
+    <h2>What Atlassian has announced</h2>
+    <ul>
+      <li><strong>Since 17 September 2025:</strong> new Cloud apps can no longer be listed on the
+        Marketplace if they contain Connect modules.</li>
+      <li><strong>Since 31 March 2026:</strong> vendors can no longer push updates to Connect
+        apps. An app that has a bug today cannot be fixed on Connect.</li>
+      <li><strong>From December 2026:</strong> Connect reaches end of support. It stops receiving
+        security patches, and Atlassian describes it as "use at your own risk". Individual
+        features may stop working over time as Connect falls behind the platform.</li>
+    </ul>
+
+    <p><strong>There is no shutdown date.</strong> Your app does not stop working on a particular
+      morning. What ends is maintenance: no security updates, and no way for the vendor to fix
+      anything, even if they want to.</p>
+
+    <p>Sources:
+      <a href="https://www.atlassian.com/blog/development/announcing-connect-end-of-support-timeline-and-next-steps">Announcing
+      Connect End of Support: Timeline and Next Steps</a> and
+      <a href="https://developer.atlassian.com/platform/adopting-forge-from-connect/connect-end-of-support-private-apps/">Connect
+      End of Support: what it means for private and custom apps</a>.</p>
+
+    <h2>How to check your own site</h2>
+    <p>You need Confluence admin rights. This takes about a minute and changes nothing.</p>
+    <ol>
+      <li>Go to <strong>admin.atlassian.com</strong> and select your site.</li>
+      <li>Select <strong>Apps</strong>, then <strong>Connected apps</strong>.</li>
+      <li>Look for apps flagged as built on Connect. Atlassian has started showing these
+        warnings inside Confluence and in the admin area.</li>
+    </ol>
+    <p>If an app appears there and its last update on the Marketplace is older than March 2026,
+      it will not receive another update, because vendors can no longer publish one.</p>
+
+    <h2>Two questions worth asking your vendor</h2>
+    <p>Before you move anything, it is fair to ask. Some vendors are building Forge replacements
+      and will tell you so.</p>
+    <ol>
+      <li>Is there a Forge version of this app, and when will it be available?</li>
+      <li>If not, what do you recommend to your customers?</li>
+    </ol>
+
+    <h2>What moving actually costs, for an export tool</h2>
+    <p>This is the part that surprises people. Moving between Confluence apps is usually painful
+      because data and configuration live inside the app. For a table <em>export</em> tool, that
+      is not the case.</p>
+    <ul>
+      <li><strong>There is no data to migrate.</strong> An export tool reads tables that already
+        exist on your pages and turns them into a file. Your tables are Confluence content and
+        stay exactly where they are.</li>
+      <li><strong>There is nothing to reconfigure.</strong> No macros are placed in your pages,
+        so nothing breaks when the app is removed.</li>
+      <li><strong>Files you already downloaded are unaffected.</strong> They are ordinary Excel
+        and CSV files on your own devices.</li>
+    </ul>
+    <p>In practice a move is: uninstall the old app, install a new one, export again. If you try
+      a different app first and prefer the old one, nothing is lost either way.</p>
+    <p>This applies to any table export app, not only ours. It is a property of the category.</p>
+
+    <h2>What to compare when you look at alternatives</h2>
+    <p>Rather than a feature table, here are the five things that actually differ between table
+      export tools, and which we found matter most when reading public reviews of apps in this
+      area:</p>
+    <ol>
+      <li><strong>Merged cells.</strong> Tables with merged cells are where exports usually go
+        wrong. Test with your most complicated table, not a simple one.</li>
+      <li><strong>Numbers.</strong> Does <code>1.234,56</code> arrive in Excel as a number you
+        can add up, or as text? Does it depend on your language?</li>
+      <li><strong>Where the data goes.</strong> Does the app send your page content to the
+        vendor's servers, or is the file built in your browser? Check the app's privacy page and
+        whether it carries the Runs on Atlassian badge.</li>
+      <li><strong>Large pages.</strong> What happens on a page with thousands of rows? A clear
+        limit with a message is better than a frozen browser.</li>
+      <li><strong>Macro tables.</strong> Tables produced by other apps (Jira issue tables, table
+        filter macros) are often not part of the page content an export tool can read. A good
+        app tells you when it skipped something.</li>
+    </ol>
+
+    <h2>Where we stand</h2>
+    <p>Our app is built on Forge, so it is not affected by the Connect timeline. It reads the
+      page in your browser with your own permissions and builds the file there. No page content
+      reaches us, and we store nothing.</p>
+    <p>What it does not do: PDF, JSON or HTML output, editing tables, filtering or charts. If you
+      need those, apps like the ones you are already using may suit you better, and that is a
+      perfectly reasonable outcome of reading this page.</p>
+    <p>The <a href="../docs/">documentation</a> lists the limits and known gaps in full, including
+      what happens with macro tables and very large pages.</p>
+
+    <h2>Questions</h2>
+    <p>If something here is unclear or you think we got a fact wrong, write to
+      <a href="mailto:contact@toosolv.com">contact@toosolv.com</a>. Every message gets an
+      automatic acknowledgement at once; a real answer follows within 3 business days.</p>
+  </main>
+
+  <footer>TooSolv Studio · <a href="mailto:contact@toosolv.com">contact@toosolv.com</a> · <a href="../impressum/">Legal notice (Impressum)</a>
+    <p>Microsoft and Excel are trademarks of the Microsoft group of companies. Atlassian, Confluence and Forge are trademarks of Atlassian. We are an independent third-party vendor and are not affiliated with or endorsed by Atlassian.</p></footer>
+</div>
+</body>
+</html>
