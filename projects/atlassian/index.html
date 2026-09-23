@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'self'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <title>Atlassian apps · TooSolv Studio</title>
   <meta name="description" content="Atlassian apps developed by TooSolv Studio.">
   <link rel="icon" href="../../toosolv-studio.png?v=20260923b">
-  <link rel="stylesheet" href="../../style.css?v=20260923c">
+  <link rel="stylesheet" href="../../style.css?v=20260923e">
+  <script src="/directory.js?v=20260923e" defer></script>
 </head>
-<body>
+<body class="directory-page">
 <header class="topbar"><div class="wide"><a class="brand" href="../../"><img src="../../toosolv-studio.png?v=20260923b" alt=""><span>TooSolv Studio</span></a><nav aria-label="Main"><a href="../../#projects">Projects</a></nav></div></header>
-<main>
+<main class="home-main">
   <div class="wide page-head">
     <p class="crumb"><a href="../../">Projects</a> <span>/</span> Atlassian</p>
     <div class="page-title"><div><p class="label">Project</p><h1>Atlassian apps</h1></div><p>Apps from TooSolv Studio for Atlassian Cloud. Product details, documentation and policies are published separately for each app.</p></div>
@@ -26,5 +27,9 @@
   </div></section>
 </main>
 <footer class="site-footer"><div class="footer-inner"><span class="copyright">© 2026 TooSolv Studio</span><nav class="footer-links" aria-label="Footer"><a href="/docs/">Documentation</a><a href="/privacy/">Privacy</a><a href="/security/">Security</a><a href="/impressum/">Legal notice</a><a href="/connect/">Connect users</a><a href="mailto:contact@toosolv.com">Contact</a></nav></div></footer>
+<dialog class="more-dialog" aria-labelledby="more-title">
+  <div class="dialog-heading"><h2 id="more-title">More Atlassian apps</h2><button type="button" class="dialog-close" aria-label="Close" autofocus>×</button></div>
+  <div class="dialog-items"></div>
+</dialog>
 </body>
 </html>
