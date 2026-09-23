@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
   <title>Documentation · Table Export for Confluence</title>
   <meta name="description" content="User guide for Table Export for Confluence: export tables to Excel or CSV, sheet names, number rules, limits, keyboard and troubleshooting.">
   <link rel="icon" href="../icon.png">
@@ -12,7 +14,7 @@
 <div class="wrap">
   <header class="site">
     <img src="../icon.png" alt="">
-    <a href="../">Table Export for Confluence</a>
+    <a href="../projects/atlassian/table-export-for-confluence/">Table Export for Confluence</a>
     <nav aria-label="Main">
       <a href="./" aria-current="page">Documentation</a>
       <a href="../privacy/">Privacy</a>
@@ -34,46 +36,23 @@
 
     <h2>Excel</h2>
     <ul>
-      <li>All tables are selected by default. Uncheck the circle on a table to leave it out.</li>
-      <li>The file contains one sheet per table. The sheet name comes from the title of the expand section or the heading above the table. The characters <code>[</code> <code>]</code> <code>:</code> <code>*</code> <code>?</code> <code>/</code> <code>\</code> are replaced, names are shortened to 31 characters (the Excel limit), and duplicate names get (2), (3) and so on. Tables without a name are called "Table 1", "Table 2" and so on, in your Confluence language.</li>
+      <li>All tables are selected by default. Select a table in the list to leave it out, and select it again to put it back. The circle on the thumbnail shows whether a table is included.</li>
+      <li>The file contains one sheet per table. The sheet name comes from the title of the expand section or the heading above the table. The characters <code>[</code> <code>]</code> <code>:</code> <code>*</code> <code>?</code> <code>/</code> <code>\</code> are replaced, names are shortened to 31 characters (the Excel limit), and duplicate names get (2), (3) and so on. Tables without a name are called "Table 1", "Table 2" and so on, in the language of the app window (English, German, French, Spanish or Japanese).</li>
       <li>Merged cells stay merged. Line breaks, special characters and emoji are kept.</li>
       <li>Formulas are never executed: a cell like <code>=SUM(A1:A2)</code> is exported as text.</li>
-      <li>Numbers become real Excel numbers in the format of your Confluence language: in German for example <code>1,5</code>, <code>1.234,56</code> and <code>12,5 %</code>, in English <code>1,234.56</code>. The decimals you see are kept. A column is converted only if all its cells below the header are numbers, so a column with text or references like "3,4" in a sentence stays text.</li>
-      <li>These values stay text: leading zeros (<code>00123</code>), <code>-0</code>, whole numbers with more than 11 digits (such as article or account numbers), currencies, dates and values like <code>1.234</code> or <code>1,234</code>, which mean different things in different languages.</li>
-    </ul>
-
-    <h2>CSV</h2>
-    <ul>
-      <li>Switch the format to <strong>CSV</strong>. The table in the preview is exported.</li>
-      <li><strong>Separator:</strong> <code>;</code> is what Excel expects in most European languages, <code>,</code> is the international standard. The app picks the right one for your Confluence language, and you can change it.</li>
-      <li>CSV files are saved as UTF-8 so special characters open correctly in Excel.</li>
-      <li>Cells that start with <code>=</code>, <code>+</code>, <code>-</code>, <code>@</code>, <code>|</code>, a tab or a carriage return, or with the full-width forms of these characters, get an apostrophe in front, so spreadsheet programs do not treat them as formulas. Plain numbers like <code>-5</code> are not changed.</li>
-      <li>CSV cannot store merged cells: the text of a merged cell appears in its first cell.</li>
-    </ul>
-
-    <h2>Limits</h2>
-    <ul>
-      <li>The preview shows the first 50 rows and 40 columns of a table. The exported file always contains all rows and columns.</li>
-      <li>An Excel cell holds at most 32,767 characters. Longer cells are cut in the Excel file. Use CSV for tables with very long cells.</li>
-      <li>Pages whose tables have more than 2 million cells in total cannot be exported.</li>
-      <li>A cell that spans several rows ends at the end of its table section (header or body), just as the browser shows it.</li>
-      <li>Tables that macros load later, such as Jira issue lists, Table Filter views or Confluence databases, are not part of the page content and are not exported. The app shows a note when it finds such macros.</li>
-      <li>The app exports the last published version of the page. Unpublished changes in the editor are not included.</li>
-      <li>Cells keep their text only: links become their link text, images and colours are not exported.</li>
-    </ul>
-
-    <h2>Keyboard</h2>
-    <p>These keys work while the table list on the left has focus. Esc works everywhere.</p>
-    <div class="table-scroll">
+      <li>Numbers become real Excel numbers. The app reads them in your own Confluence language: in German for example <code>1,5</code>, <code>1.234,56</code> and <code>12,5 %</code>, in English <code>1,234.56</code>. The decimals you see are kept. How Excel then displays them follows the regional settings of the computer that opens the file, so a colleague abroad may see a dot where you see a comma.</li>
+      <li>These values stay text: leading zeros (<code>00123</code>), <code>-0</code>, whole numbers with more than 11 digits (such as article or account numbers), currencies and dates. A date like <code>01.02.2026</code> is never turned into a number, and neither is a value with a trailing zero such as <code>1.10</code>. A plain <code>1.1</code>, however, is a decimal number in English and is treated as one: the app cannot tell a chapter number from a decimal, because nothing in the text distinguishes them. If a column holds chapter numbers, give one cell a trailing zero or a letter, and the whole column stays text</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Table">
       <table>
-        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <caption class="sr-only">Keyboard shortcuts</caption>
+        <thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead>
         <tbody>
           <tr><td><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd></td><td>Move between tables</td></tr>
           <tr><td><kbd>Home</kbd> <kbd>End</kbd></td><td>First or last table</td></tr>
           <tr><td><kbd>Space</kbd></td><td>Include or exclude the table. In CSV mode, it shows the table in the preview.</td></tr>
           <tr><td><kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd></td><td>Select all tables</td></tr>
           <tr><td><kbd>Enter</kbd></td><td>Export</td></tr>
-          <tr><td><kbd>Esc</kbd></td><td>Close</td></tr>
+          <tr><td><kbd>Esc</kbd></td><td>Close an open hint or message, otherwise close the window</td></tr>
         </tbody>
       </table>
     </div>
@@ -82,12 +61,15 @@
     <p>The app follows your Confluence language. Supported languages: English, German, French, Spanish and Japanese.</p>
 
     <h2>Troubleshooting</h2>
-    <div class="table-scroll">
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Table">
       <table>
-        <thead><tr><th>You see</th><th>What to do</th></tr></thead>
+        <caption class="sr-only">Troubleshooting</caption>
+        <thead><tr><th scope="col">You see</th><th scope="col">What to do</th></tr></thead>
         <tbody>
           <tr><td>"No tables on this page"</td><td>Only real Confluence tables are exported. Tables inside images, attachments or embedded files cannot be read, and tables loaded by macros (for example Jira issue lists) are not included.</td></tr>
-          <tr><td>"Could not read this page"</td><td>You may not have permission to view the page, or Confluence is temporarily unavailable. Select <strong>Try again</strong>.</td></tr>
+          <tr><td>"Could not read this page"</td><td>You may not have permission to view the page, or Confluence is temporarily unavailable. Select <strong>Try again</strong>. If the page is clearly visible to you, your organisation may block apps in this space with a data security policy; ask your Confluence administrator whether an app access rule covers it.</td></tr>
+          <tr><td>Everything lands in one column when you open a CSV file</td><td>Excel uses the list separator of your computer. Switch the separator in the app (<code>;</code> or <code>,</code>) and export again, or open the file through Data &gt; From Text/CSV.</td></tr>
+          <tr><td>You need a PDF</td><td>Export to Excel and print to PDF from there, or use Confluence's own Export to PDF for the whole page.</td></tr>
           <tr><td>"License not active"</td><td>Ask your Confluence administrator to renew the app.</td></tr>
           <tr><td>The menu item is missing</td><td>The app license may be inactive, or the app is not installed on this site.</td></tr>
           <tr><td>The download does not start</td><td>Allow downloads for your Confluence site in your browser. If the app shows a <strong>Save file</strong> button (for example in Safari), select it to start the download.</td></tr>
@@ -95,14 +77,36 @@
       </table>
     </div>
 
+    <h2>For administrators</h2>
+    <p><strong>Who we are.</strong> Table Export for Confluence is built and supported by TooSolv Studio, a small independent software studio based in Germany. Contact details and postal address are in our <a href="../impressum/">legal notice</a>.</p>
+    <p><strong>What the app can reach.</strong> One permission only: <code>read:page:confluence</code>. The app reads the page the user has open, as that user, with that user's own permissions. It cannot search your site, list or read other pages, reach a whole space, or open attachments. It has no backend, no servers and no storage, so there is nothing for us to see and nothing for anyone to breach.</p>
+    <p><strong>Does an export app make it easier to take data out?</strong> It is a fair question, so here is the precise answer. Everything the app can read, the user can already see on screen, select, copy and paste into Excel, or take out with Confluence's own Export to Word and Export to PDF. The app makes that route cleaner, not wider. If your policy is that certain content must not leave Confluence, the controls that work are the ones you already have: page and space permissions, and Atlassian's data security policies, which can block this app in named spaces.</p>
+    <p><strong>Restricting the app.</strong> You can block it in individual spaces with Atlassian's data security policies (Administration, Security, Data security policies, App access rules). You can also uninstall it per site.</p>
+    <p><strong>Audit.</strong> The app writes no log and keeps no record of who exported which page, because it stores nothing at all. If you need such a record, use Confluence's own audit log and page analytics; the app reads pages exactly the way the user does. Forge gives app vendors access to the app logs of the sites where their app is installed, and that sharing is on by default. This app writes no log output at all, so there is nothing in those logs for us to see. Your administrator can switch log sharing off at any time at admin.atlassian.com under Apps, Connected apps.</p>
+    <p><strong>What we do count.</strong> The app keeps eight plain counters so we can tell whether it is working: for example that a page was read, that an Excel file was created, or that the app hit an error. They carry no content, no names and no page identifiers, and all eight are listed on our <a href="../privacy/">privacy page</a>. Atlassian's platform adds which site a count came from and roughly when, never which user or which page. To switch them off for your whole site: go to admin.atlassian.com, select the site, select Apps, then Connected apps, choose this app, and in the Details tab turn off "Custom metrics access".</p>
+    <p><strong>Certification.</strong> We hold no SOC 2 or ISO 27001 certificate. Both certify how a vendor runs its servers and handles customer data. We run no servers and receive no customer data: the app runs entirely inside Atlassian's Forge platform, which is itself covered by Atlassian's certifications. Our <a href="../security/">security page</a> explains the setup in full.</p>
+    <p><strong>Billing.</strong> Atlassian bills Marketplace apps by the number of users on your Confluence site, not by the number of people who use the app. That is how the Marketplace works for every app, ours included. Sites with 10 users or fewer pay nothing.</p>
+    <p><strong>Trial and cancellation.</strong> Atlassian gives every paid app a free trial; its length and terms are set by Atlassian and shown on the pricing tab of our listing. When a licence ends, the menu entry disappears on the same day and the app can do nothing at all. Files your people already downloaded stay on their devices, because they are ordinary Excel and CSV files with no link back to us. There is nothing to delete and nothing to hand back, because we never held anything.</p>
+
     <h2>Privacy</h2>
-    <p>The page is read in your browser with your own permissions. Nothing is sent to or stored by the vendor, and the app stores nothing in your browser. See the <a href="../privacy/">privacy policy</a>.</p>
+    <p>The page is read in your browser with your own permissions. No page content is sent to or stored by the vendor, and the app stores nothing in your browser. We receive only a handful of plain counters that say an export ran, never what was in it. See the <a href="../privacy/">privacy policy</a>.</p>
+    <p>If you select <strong>Help</strong> in an error message, your browser opens this documentation page, which is hosted by GitHub. Nothing about your Confluence page is sent with it.</p>
+
+    <h2>Open source</h2>
+    <p>The app window contains software by other authors, used under their licences: iframe-resizer and lodash (MIT), tslib (0BSD), and Atlassian's own Forge bridge packages. The full notices are in the file third-party.txt that ships with the app.</p>
+
+    <h2>Moving from another table export app</h2>
+    <p>If your current table export app is built on Atlassian Connect, your admin may have
+      started seeing warnings about it. <a href="../connect/">What Connect end of support means,
+      how to check your site, and what a move costs</a> explains the timeline with links to
+      Atlassian's announcements. Short version: for an export tool there is no data to migrate,
+      because your tables stay in Confluence.</p>
 
     <h2>Support</h2>
     <p>Email <a href="mailto:contact@toosolv.com">contact@toosolv.com</a>.</p>
     <ul>
-      <li>Critical issues (app unusable or security): first response within 24 hours.</li>
-      <li>Other requests: within 3 business days.</li>
+      <li>Every message gets an automatic acknowledgement at once, so you know it arrived.</li>
+      <li>A real answer follows within 3 business days, usually sooner.</li>
     </ul>
   </main>
 
