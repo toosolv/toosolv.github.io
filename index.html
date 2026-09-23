@@ -5,44 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>TooSolv Studio · Practical software for everyday work</title>
-  <meta name="description" content="TooSolv Studio builds focused software that removes repetitive work. Explore our projects.">
-  <link rel="icon" href="icon.png">
+  <title>TooSolv Studio · Software from Hamburg</title>
+  <meta name="description" content="TooSolv Studio is an independent software studio in Hamburg. Explore our projects and products.">
+  <link rel="icon" href="toosolv-studio.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap company-home">
-  <header class="site">
-    <a class="brand" href="./" aria-label="TooSolv Studio home"><img src="icon.png" alt=""><span>TooSolv Studio</span></a>
+<header class="topbar">
+  <div class="wide">
+    <a class="brand" href="./" aria-label="TooSolv Studio home"><img src="toosolv-studio.png" alt=""><span>TooSolv Studio</span></a>
     <nav aria-label="Main"><a href="#projects">Projects</a><a href="impressum/">Legal notice</a></nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <p class="eyebrow">Independent software studio</p>
-      <h1>Small tools that solve real work.</h1>
-      <p class="lead">TooSolv Studio builds focused software for tasks that should be quick, reliable and easy to understand.</p>
-      <a class="button" href="#projects">Explore our projects</a>
-    </section>
+<main>
+  <section class="home-intro wide">
+    <div class="intro-copy">
+      <p class="label">Independent software studio · Hamburg</p>
+      <h1>Software for work that should be simpler.</h1>
+      <p class="lead">TooSolv Studio develops and operates focused business software. Each product has clear documentation, published security information and direct support.</p>
+      <a class="text-link" href="#projects">See our projects <span aria-hidden="true">→</span></a>
+    </div>
+    <aside class="studio-facts" aria-label="About TooSolv Studio">
+      <h2>TooSolv Studio</h2>
+      <dl>
+        <div><dt>Based in</dt><dd>Hamburg, Germany</dd></div>
+        <div><dt>Focus</dt><dd>Business software</dd></div>
+        <div><dt>Contact</dt><dd><a href="mailto:contact@toosolv.com">contact@toosolv.com</a></dd></div>
+      </dl>
+    </aside>
+  </section>
 
-    <section id="projects" class="project-section" aria-labelledby="projects-title">
-      <div class="section-heading">
-        <div><p class="eyebrow">Our work</p><h2 id="projects-title">Choose a project</h2></div>
-        <p>Open a project to see its apps, tools and documentation.</p>
-      </div>
-      <div class="project-grid">
-        <a class="project-card" href="projects/atlassian/">
-          <span class="project-symbol" aria-hidden="true">A</span>
-          <span class="project-meta">Software ecosystem</span>
-          <strong>Atlassian</strong>
-          <span>Apps and tools for Confluence and other Atlassian products.</span>
-          <span class="project-link">View project <span aria-hidden="true">→</span></span>
-        </a>
-      </div>
-    </section>
-  </main>
+  <section id="projects" class="projects-block">
+    <div class="wide">
+      <div class="section-title"><div><p class="label">Projects</p><h2>What we are working on</h2></div><p>Products are grouped by the platform or field they belong to.</p></div>
+      <a class="project-row" href="projects/atlassian/">
+        <span class="project-letter" aria-hidden="true">A</span>
+        <span class="project-copy"><strong>Atlassian</strong><span>Apps and tools for teams using Confluence and other Atlassian products.</span></span>
+        <span class="row-action">View apps <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </section>
+</main>
 
-  <footer>© 2026 TooSolv Studio · <a href="mailto:contact@toosolv.com">contact@toosolv.com</a> · <a href="impressum/">Legal notice (Impressum)</a></footer>
-</div>
+<footer><div class="wide"><span>© 2026 TooSolv Studio</span><span><a href="mailto:contact@toosolv.com">contact@toosolv.com</a> · <a href="impressum/">Legal notice</a></span></div></footer>
 </body>
 </html>
