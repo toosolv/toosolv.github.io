@@ -266,3 +266,31 @@ body > .wrap { flex: 1; display: flex; flex-direction: column; padding-bottom: 0
  .directory-ready .section-title h2 { font-size: 28px; }
  .directory-ready .section-title .label { margin-bottom: 8px; }
 }
+
+/* Shared product-page pattern: icon above flush-left copy and disclosed illustrations. */
+.app-page .product-overview { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+.app-page .product-title { display: block; text-align: left; }
+.app-page .product-title > img { display: block; width: 72px; height: 72px; margin: 0 0 24px; border-radius: 16px; }
+.app-page .product-title h1 { max-width: 20ch; }
+.app-page .product-actions { margin-left: 0; }
+.app-visual { margin: 0; min-width: 0; }
+.app-visual-frame { position: relative; overflow: hidden; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); }
+.app-visual .illustration { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.ai-image-label { position: absolute; right: 12px; bottom: 12px; width: 32px; height: 32px; overflow: hidden; border-radius: 50%; background: #000; box-shadow: 0 0 0 2px white; }
+.ai-image-label img { position: absolute; width: 50px; height: auto; max-width: none; left: -8px; top: -9px; }
+.app-visual figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; }
+.app-facts { padding-bottom: 32px; }
+.app-facts .product-summary { padding: 20px 24px; }
+.app-facts .product-summary h2 { font-size: 16px; margin-bottom: 12px; }
+.app-facts .product-summary dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.app-facts .product-summary dl div { padding-block: 8px 0; }
+.app-page .review-links .wide { grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(32px, 5vw, 80px); }
+.app-page .review-links .wide > .app-resources { display: block; }
+.app-resources > p { color: var(--muted); margin-bottom: 24px; }
+@media (max-width: 900px) {
+ .app-page .product-overview, .app-page .review-links .wide { grid-template-columns: 1fr; }
+ .app-page .product-overview > .app-visual { max-width: 680px; }
+ .app-facts .product-summary dl { grid-template-columns: 1fr; gap: 0; }
+ .app-facts .product-summary dl div { padding-block: 10px; }
+ .app-page .review-links .wide > .app-visual { max-width: 680px; }
+}
