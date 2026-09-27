@@ -1,0 +1,29 @@
+name: Feature request
+description: Suggest an improvement to TableFlow
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: This is a public tracker. Do not include table contents, email addresses, site URLs or other confidential information.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the work you are trying to complete.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Desired result
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed confidential information and personal data from this public request.
+          required: true

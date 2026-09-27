@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>Security policy · TableFlow for Confluence – Excel & CSV Export</title>
-  <meta name="description" content="Security policy of TableFlow for Confluence – Excel & CSV Export: how the app is built and how to report a vulnerability to TooSolv Studio.">
-  <link rel="icon" href="../toosolv-studio.png?v=20260923b">
+  <title>Security policy · TableFlow for Confluence - Excel & CSV Export</title>
+  <meta name="description" content="Security policy of TableFlow for Confluence - Excel & CSV Export: how the app is built and how to report a vulnerability to TooSolv Studio.">
+  <link rel="icon" href="../toosolv-studio.png?v=20260926">
   <link rel="stylesheet" href="../style.css?v=20260923c">
 </head>
 <body>
 <div class="wrap">
   <header class="site">
-    <img src="../toosolv-studio.png?v=20260923b" alt="">
+    <img src="../toosolv-studio.png?v=20260926" alt="">
     <a href="../">TooSolv Studio</a>
     <nav aria-label="Main">
       <a href="../docs/">Documentation</a>
       <a href="../privacy/">Privacy</a>
       <a href="./" aria-current="page">Security</a>
-      
+
     </nav>
   </header>
 
@@ -29,17 +29,18 @@
 
     <h2>How the app is built</h2>
     <ul>
-      <li>The app is built on Atlassian Forge. It has no backend and TooSolv Studio operates no servers.</li>
-      <li>It requests a single read permission (<code>read:page:confluence</code>) and reads pages with the permissions of the signed-in user.</li>
+      <li>The app is built on Atlassian Forge. TooSolv Studio operates no external app servers.</li>
+      <li>It requests <code>read:page:confluence</code> to read the open page and <code>storage:app</code> to keep export-history metadata in Forge hosted storage.</li>
       <li>Files are created in the browser. Page content stays within Atlassian and your device.</li>
+      <li>Forge history records contain metadata only, never table-cell content or exported files, and remain separated by app installation and signed-in account.</li>
       <li>The app follows Atlassian's security requirements for Marketplace apps.</li>
     </ul>
 
     <h2>Does an export app make it easier to take data out?</h2>
-    <p>It is a fair question, so here is the precise answer. The app asks for exactly one permission, <code>read:page:confluence</code>, and it reads only the page the user has open, as that user, with that user's own permissions. It cannot search, it cannot list or read other pages, it cannot reach a whole space, and it cannot send content anywhere, because we run no server for it to send to. The only thing it reports is a set of plain counters inside Atlassian's own platform, which record that something happened, for example that a page was read or that an export ran, never what was in it (our <a href="../privacy/">privacy page</a> lists all of them, and you can switch them off for your site). Everything it can read, the user can already see on screen, select, copy and paste into Excel, or take out with Confluence's own Export to Word and Export to PDF. The app makes that route cleaner, not wider. If your policy is that certain content must not leave Confluence, the controls that work are the ones you already have: page and space permissions, and Atlassian's data security policies, which can block this app in named spaces.</p>
+    <p>It is a fair question, so here is the precise answer. The app reads only the page the user has open, as that user, with that user's own permissions. It cannot search, list or read other pages, reach a whole space, or send content to a vendor server. The additional <code>storage:app</code> permission stores only export-history metadata inside Atlassian Forge. Everything the app can read, the user can already see on screen, copy into Excel, or export through Confluence. If your policy is that content must not leave Confluence, use page and space permissions and Atlassian's data security policies, which can block this app in named spaces.</p>
 
     <h2>Scope</h2>
-    <p>This policy covers the TableFlow for Confluence – Excel & CSV Export app, this website (toosolv.github.io) and the address contact@toosolv.com. It does not cover Atlassian's own platform, Confluence Cloud or the Atlassian Marketplace; please report those through <a href="https://bugcrowd.com/atlassian">Atlassian's own vulnerability programme</a>.</p>
+    <p>This policy covers the TableFlow for Confluence - Excel & CSV Export app, this website (toosolv.github.io) and the address contact@toosolv.com. It does not cover Atlassian's own platform, Confluence Cloud or the Atlassian Marketplace; please report those through <a href="https://bugcrowd.com/atlassian">Atlassian's own vulnerability programme</a>.</p>
 
     <h2>Safe harbour</h2>
     <p>If you report a vulnerability in good faith, keep to the scope above, do not access, change or delete data that is not yours, and give us reasonable time before making details public, we will not take legal action against you and will treat your report as authorised research.</p>
@@ -55,7 +56,7 @@
     </ul>
   </main>
 
-  <footer class="site-footer"><div class="footer-inner"><span class="copyright">© 2026 TooSolv Studio</span><nav class="footer-links" aria-label="Footer"><a href="/docs/">Documentation</a><a href="/privacy/">Privacy</a><a href="/security/">Security</a><a href="/impressum/">Legal notice</a><a href="/connect/">Connect users</a><a href="mailto:contact@toosolv.com">Contact</a></nav></div><p class="footer-trademark">Microsoft and Excel are trademarks of the Microsoft group of companies. Atlassian and Confluence are trademarks of Atlassian.</p></footer>
+  <footer class="site-footer"><div class="footer-inner"><span class="copyright">© 2026 TooSolv Studio</span><nav class="footer-links" aria-label="Footer"><a href="/docs/">Documentation</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/security/">Security</a><a href="/impressum/">Legal notice</a><a href="/connect/">Connect users</a><a href="mailto:contact@toosolv.com">Contact</a></nav></div><p class="footer-trademark">Microsoft and Excel are trademarks of the Microsoft group of companies. Atlassian and Confluence are trademarks of Atlassian.</p></footer>
 </div>
 </body>
 </html>

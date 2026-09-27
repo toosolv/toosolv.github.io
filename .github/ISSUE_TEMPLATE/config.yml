@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private support request
+    url: https://toosolv.github.io/support/
+    about: Use email from the support page when your request contains confidential information.
+  - name: Security report
+    url: https://toosolv.github.io/security/
+    about: Follow the private reporting instructions. Do not disclose vulnerabilities publicly.

@@ -5,49 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>Privacy policy · TableFlow for Confluence – Excel & CSV Export</title>
-  <meta name="description" content="Privacy policy of TableFlow for Confluence – Excel & CSV Export by TooSolv Studio: the app processes page content in your browser and stores no data.">
-  <link rel="icon" href="../toosolv-studio.png?v=20260923b">
+  <title>Privacy policy · TableFlow for Confluence - Excel & CSV Export</title>
+  <meta name="description" content="Privacy policy of TableFlow for Confluence - Excel & CSV Export by TooSolv Studio: page content stays in the browser and export-history metadata is stored in Atlassian Forge.">
+  <link rel="icon" href="../toosolv-studio.png?v=20260926">
   <link rel="stylesheet" href="../style.css?v=20260923c">
 </head>
 <body>
 <div class="wrap">
   <header class="site">
-    <img src="../toosolv-studio.png?v=20260923b" alt="">
+    <img src="../toosolv-studio.png?v=20260926" alt="">
     <a href="../">TooSolv Studio</a>
     <nav aria-label="Main">
       <a href="../docs/">Documentation</a>
       <a href="./" aria-current="page">Privacy</a>
       <a href="../security/">Security</a>
-      
+
     </nav>
   </header>
 
   <main>
     <h1>Privacy policy</h1>
-    <p class="lead">Last updated: 17 September 2026</p>
+    <p class="lead">Last updated: 27 September 2026</p>
 
     <h2>Who we are</h2>
-    <p>TableFlow for Confluence – Excel & CSV Export ("the app") is provided by TooSolv Studio, Ryan-Jamil Rezgaoui (postal address in our <a href="../impressum/">legal notice</a>). Contact: <a href="mailto:contact@toosolv.com">contact@toosolv.com</a></p>
+    <p>TableFlow for Confluence - Excel & CSV Export ("the app") is provided by TooSolv Studio, Ryan-Jamil Rezgaoui (postal address in our <a href="../impressum/">legal notice</a>). Contact: <a href="mailto:contact@toosolv.com">contact@toosolv.com</a></p>
 
     <h2>Summary</h2>
-    <p>The app does not collect, store or transfer any personal data or page content. It runs on Atlassian's Forge platform; the file is created inside your web browser.</p>
+    <p>Page and table content stays in your browser and is never stored. Export-history metadata is stored in Atlassian Forge until you clear it. TooSolv Studio operates no external server for the app.</p>
 
     <h2>What the app does with your data</h2>
     <ul>
       <li>When you open "Export tables" on a Confluence page, the app reads that page's content through Atlassian's API with <strong>your own permissions</strong>. It can only read what you can already see.</li>
       <li>The tables are turned into an Excel or CSV file <strong>inside your browser</strong> and downloaded to your device.</li>
       <li>No page content and no personal data is sent to TooSolv Studio or to any third party. TooSolv Studio operates no servers for this app. The only thing we receive is the counters described below under "Cookies, tracking, analytics".</li>
+      <li>For the export history, Atlassian Forge stores the date and time, downloaded file name, export format and delivery mode, included table names and the Confluence page identifier. The page identifier prevents "Repeat export" from reading a different page. The history is separated by app installation and signed-in Atlassian account.</li>
       <li>If an error occurs, the app shows a short diagnostic line: an error code, the app version, the identifier of the Confluence page and your language setting. It offers to copy that line to your clipboard. Whether you send it to us is your decision. If you do, we handle it like any other support message.</li>
       <li>If you select <strong>Help</strong> in an error message, your browser opens our documentation page on this website. Nothing about your Confluence page is sent with it. What the web host logs is described under "This website" below.</li>
       <li>Forge gives app vendors access to the app logs of the sites where their app is installed, and that sharing is switched on by default. This app writes no log output at all, so there is nothing in those logs for us to see. Your administrator can switch log sharing off at any time at admin.atlassian.com under Apps, Connected apps.</li>
     </ul>
 
-    <h2>Data stored in your browser</h2>
-    <p>None. The app stores nothing in your browser: no local storage, no cookies. The exported file is saved to your device only when you select Export. The only time the app touches your device beyond that is the clipboard, and only when you select "Copy details" yourself.</p>
+    <h2>Data stored in your browser and Atlassian Forge</h2>
+    <p>The app stores your quick-start completion, app-language choice, display-theme choice, Excel number-format choice and CSV-separator choice in local browser storage. Forge stores export-history metadata until you select <strong>Clear history</strong>: export date and time, file name, format and delivery mode, included table names and the source page identifier. It also uses a one-way hash of your Atlassian account identifier to keep each account's history separate. Neither table-cell content nor an exported file is stored. During migration or a temporary Forge failure, unsent history metadata can remain in the browser until Forge accepts it. The app sets no cookies. The exported file is saved to your device only when you select Export. The clipboard is used only when you select "Copy details" yourself.</p>
+
+    <h2>Retention and deletion</h2>
+    <p>Your export history remains in Forge until you explicitly clear it in the app. Clearing the history removes every history record for your account in that app installation; files already downloaded to your device remain unchanged. If the app is uninstalled, Atlassian retains Forge hosted app data for 28 days under its platform lifecycle and then removes it. TooSolv Studio keeps no separate copy.</p>
 
     <h2>Atlassian</h2>
-    <p>The app is hosted and run by Atlassian as part of Confluence Cloud. Atlassian's processing of your data is governed by <a href="https://www.atlassian.com/legal/privacy-policy">Atlassian's own privacy policy</a>.</p>
+    <p>The app is hosted and run by Atlassian as part of Confluence Cloud. Its history uses Atlassian Forge hosted storage and follows Atlassian's security and data residency controls. Atlassian's processing of your data is governed by <a href="https://www.atlassian.com/legal/privacy-policy">Atlassian's own privacy policy</a>.</p>
+
+    <h2>Data processing terms</h2>
+    <p>Atlassian's <a href="https://developer.atlassian.com/platform/forge/about-the-forge-data-processing-addendum/">Forge Data Processing Addendum</a> governs Atlassian's processing for the Forge platform. Depending on a customer's use and the personal data contained in export-history metadata, TooSolv Studio may act as a processor for that customer and Atlassian as its subprocessor. Where applicable law requires a customer-facing data processing agreement, please contact <a href="mailto:contact@toosolv.com?subject=TableFlow%20DPA">contact@toosolv.com</a> before installing the app. The app sends no table content or exported file to TooSolv Studio.</p>
 
     <h2>Cookies, tracking, analytics</h2>
     <p>The app sets no cookies and does not track you. It does keep eight simple counters, one for each of these events, so that we can tell whether the app is working for our customers:</p>
@@ -75,13 +82,13 @@
     <p>This website is hosted by GitHub Pages (GitHub, Inc., USA). When you visit it, GitHub processes technical data such as your IP address in server logs to deliver the page and keep it secure. Legal basis: Art. 6(1)(f) GDPR (our legitimate interest in a secure, reachable website). GitHub is certified under the EU-US Data Privacy Framework, which covers the transfer to the USA. How long GitHub keeps these logs is described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. This website sets no cookies and uses no tracking.</p>
 
     <h2>Your rights</h2>
-    <p>You have the right to access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object to processing based on legitimate interests (Art. 21). You also have the right to lodge a complaint with a data protection supervisory authority. The app itself sends no personal data to TooSolv Studio; for data held in Confluence, please contact your Confluence administrator or Atlassian. Questions about this policy: <a href="mailto:contact@toosolv.com">contact@toosolv.com</a></p>
+    <p>You have the right to access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object to processing based on legitimate interests (Art. 21). You also have the right to lodge a complaint with a data protection supervisory authority. The app sends no personal data to TooSolv Studio. You can erase the app's export history with <strong>Clear history</strong>. For other data held by Atlassian, contact your Confluence administrator or Atlassian. Questions about this policy: <a href="mailto:contact@toosolv.com">contact@toosolv.com</a></p>
 
     <h2>Changes</h2>
-    <p>If the app ever starts to process or store personal data, this policy will be updated before that release, and the date above will change.</p>
+    <p>This policy is updated before a release changes what the app reads, stores, sends or retains.</p>
   </main>
 
-  <footer class="site-footer"><div class="footer-inner"><span class="copyright">© 2026 TooSolv Studio</span><nav class="footer-links" aria-label="Footer"><a href="/docs/">Documentation</a><a href="/privacy/">Privacy</a><a href="/security/">Security</a><a href="/impressum/">Legal notice</a><a href="/connect/">Connect users</a><a href="mailto:contact@toosolv.com">Contact</a></nav></div><p class="footer-trademark">Microsoft and Excel are trademarks of the Microsoft group of companies. Atlassian and Confluence are trademarks of Atlassian.</p></footer>
+  <footer class="site-footer"><div class="footer-inner"><span class="copyright">© 2026 TooSolv Studio</span><nav class="footer-links" aria-label="Footer"><a href="/docs/">Documentation</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/security/">Security</a><a href="/impressum/">Legal notice</a><a href="/connect/">Connect users</a><a href="mailto:contact@toosolv.com">Contact</a></nav></div><p class="footer-trademark">Microsoft and Excel are trademarks of the Microsoft group of companies. Atlassian and Confluence are trademarks of Atlassian.</p></footer>
 </div>
 </body>
 </html>
