@@ -30,7 +30,7 @@
     <h2>How the app is built</h2>
     <ul>
       <li>The app is built on Atlassian Forge. TooSolv Studio operates no external app servers.</li>
-      <li>It requests <code>read:page:confluence</code> to read the open page and <code>storage:app</code> to keep export-history metadata in Forge hosted storage.</li>
+      <li>It requests <code>read:page:confluence</code> to read the open page, <code>storage:app</code> to keep export-history metadata in Forge hosted storage, and <code>report:personal-data</code> to handle Atlassian privacy deletion and refresh instructions.</li>
       <li>Files are created in the browser. Page content stays within Atlassian and your device.</li>
       <li>Forge history records contain metadata only, never table-cell content or exported files, and remain separated by app installation and signed-in account.</li>
       <li>The app follows Atlassian's security requirements for Marketplace apps.</li>
@@ -50,7 +50,7 @@
 
     <h2>What happens next</h2>
     <ul>
-      <li>You get an automatic acknowledgement at once, and a personal reply within 3 business days.</li>
+      <li>We send a first response within 3 business days, usually sooner.</li>
       <li>We fix confirmed vulnerabilities within the timeframes of Atlassian's <a href="https://developer.atlassian.com/platform/marketplace/security-bugfix-policy/">Security Bug Fix Policy for Marketplace apps</a>.</li>
       <li>We tell you when the fix is released.</li>
     </ul>
