@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>Documentation · TableFlow for Confluence - Excel & CSV Export</title>
-  <meta name="description" content="User guide for TableFlow for Confluence - Excel & CSV Export: export tables to Excel or CSV, sheet names, number rules, limits, keyboard and troubleshooting.">
+  <title>Documentation · TableFlow: Excel & CSV Export for Confluence</title>
+  <meta name="description" content="User guide for TableFlow: Excel & CSV Export for Confluence: export tables to Excel or CSV, sheet names, number rules, limits, keyboard and troubleshooting.">
   <link rel="icon" href="../toosolv-studio.png?v=20260926">
   <link rel="stylesheet" href="../style.css?v=20260923c">
 </head>
@@ -30,9 +30,17 @@
     <h2>Export tables in three steps</h2>
     <ol>
       <li>Open a Confluence page that contains tables. Tables inside expand sections and page layouts are found too.</li>
-      <li>Select <strong>•••</strong> (top right) → <strong>Apps</strong> → <strong>Export tables (Excel/CSV)</strong>.</li>
+      <li>Open the page menu in the top right. Choose <strong>Apps</strong>, then <strong>Export tables (Excel/CSV)</strong>.</li>
       <li>Check the preview, then select the <strong>Export</strong> button at the bottom right.</li>
     </ol>
+
+    <h2>Focused guides</h2>
+    <ul>
+      <li><a href="excel-export/">Export Confluence tables to Excel</a></li>
+      <li><a href="csv-export/">Export one or several tables to CSV</a></li>
+      <li><a href="multiple-tables/">Export multiple tables and keep merged cells</a></li>
+      <li><a href="faq/">Questions about privacy, files, billing and support</a></li>
+    </ul>
 
     <h2>Excel</h2>
     <ul>
@@ -56,7 +64,7 @@
         <caption class="sr-only">Keyboard shortcuts</caption>
         <thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead>
         <tbody>
-          <tr><td><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd></td><td>Move between tables</td></tr>
+          <tr><td><kbd>Arrow keys</kbd></td><td>Move between tables</td></tr>
           <tr><td><kbd>Home</kbd> <kbd>End</kbd></td><td>First or last table</td></tr>
           <tr><td><kbd>Space</kbd></td><td>Include or exclude the table. In CSV mode, it shows the table in the preview.</td></tr>
           <tr><td><kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd></td><td>Select all tables</td></tr>
@@ -89,7 +97,7 @@
     </div>
 
     <h2>For administrators</h2>
-    <p><strong>Who we are.</strong> TableFlow for Confluence - Excel & CSV Export is built and supported by TooSolv Studio, a small independent software studio based in Germany. Contact details and postal address are in our <a href="../impressum/">legal notice</a>.</p>
+    <p><strong>Who we are.</strong> TableFlow: Excel & CSV Export for Confluence is built and supported by TooSolv Studio, a small independent software studio based in Germany. Contact details and postal address are in our <a href="../impressum/">legal notice</a>.</p>
     <p><strong>What the app can reach.</strong> The <code>read:page:confluence</code> permission lets the app read only the page the user has open, as that user, with that user's own permissions. It cannot search your site, list or read other pages, reach a whole space, or open attachments. The <code>storage:app</code> permission stores export-history metadata in Atlassian Forge. TooSolv Studio operates no external app server.</p>
     <p><strong>Does an export app make it easier to take data out?</strong> It is a fair question, so here is the precise answer. Everything the app can read, the user can already see on screen, select, copy and paste into Excel, or take out with Confluence's own Export to Word and Export to PDF. The app makes that route cleaner, not wider. If your policy is that certain content must not leave Confluence, the controls that work are the ones you already have: page and space permissions, and Atlassian's data security policies, which can block this app in named spaces.</p>
     <p><strong>Restricting the app.</strong> You can block it in individual spaces with Atlassian's data security policies (Administration, Security, Data security policies, App access rules). You can also uninstall it per site.</p>
