@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>Your table exporter runs on Connect · TableFlow for Confluence - Excel & CSV Export</title>
+  <title>Your table exporter runs on Connect · TableFlow: Excel & CSV Export for Confluence</title>
   <meta name="description" content="What Atlassian Connect end of support means for table export apps in Confluence Cloud, how to check whether yours is affected, and what a move costs.">
   <link rel="icon" href="../toosolv-studio.png?v=20260926">
   <link rel="stylesheet" href="../style.css?v=20260923c">
@@ -36,16 +36,18 @@
     <ul>
       <li><strong>Since 17 September 2025:</strong> new Cloud apps can no longer be listed on the
         Marketplace if they contain Connect modules.</li>
-      <li><strong>Since 31 March 2026:</strong> vendors can no longer push updates to Connect
-        apps. An app that has a bug today cannot be fixed on Connect.</li>
-      <li><strong>From December 2026:</strong> Connect reaches end of support. It stops receiving
+      <li><strong>Since 31 March 2026:</strong> Atlassian no longer processes updates made only
+        through a Connect descriptor. Apps that have adopted a Forge manifest can still receive
+        updates while they move from Connect to Forge.</li>
+      <li><strong>From 31 January 2027:</strong> Connect reaches end of support. This date was
+        extended from December 2026 to give vendors more time. Only critical security issues continue to receive fixes
         security patches, and Atlassian describes it as "use at your own risk". Individual
         features may stop working over time as Connect falls behind the platform.</li>
     </ul>
 
     <p><strong>There is no shutdown date.</strong> Your app does not stop working on a particular
-      morning. What ends is maintenance: no security updates, and no way for the vendor to fix
-      anything, even if they want to.</p>
+      morning. After end of support, Connect receives only critical security fixes, other fixes
+      are no longer guaranteed, and integration points may become incompatible over time.</p>
 
     <p>Sources:
       <a href="https://www.atlassian.com/blog/development/announcing-connect-end-of-support-timeline-and-next-steps">Announcing
@@ -61,8 +63,9 @@
       <li>Look for apps flagged as built on Connect. Atlassian has started showing these
         warnings inside Confluence and in the admin area.</li>
     </ol>
-    <p>If an app appears there and its last update on the Marketplace is older than March 2026,
-      it will not receive another update, because vendors can no longer publish one.</p>
+    <p>If an app appears there and its last Marketplace update is older than March 2026, ask its
+      vendor whether a Forge migration is planned. The date alone does not prove that the app has
+      been abandoned or that no further update can be delivered.</p>
 
     <h2>Two questions worth asking your vendor</h2>
     <p>Before you move anything, it is fair to ask. Some vendors are building Forge replacements
@@ -111,7 +114,8 @@
     <h2>Where we stand</h2>
     <p>Our app is built on Forge, so it is not affected by the Connect timeline. It reads the
       page in your browser with your own permissions and builds the file there. No page content
-      reaches us, and we store nothing.</p>
+      reaches TooSolv Studio. Table cells and exported files are never stored. Export-history
+      metadata is stored in Atlassian Forge until the user clears it.</p>
     <p>What it does not do: PDF, JSON or HTML output, editing tables, filtering or charts. If you
       need those, apps like the ones you are already using may suit you better, and that is a
       perfectly reasonable outcome of reading this page.</p>
