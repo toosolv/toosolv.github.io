@@ -31,13 +31,13 @@
     <ul>
       <li>The app is built on Atlassian Forge. TooSolv Studio operates no external app servers.</li>
       <li>It requests <code>read:page:confluence</code> to read the open page, <code>storage:app</code> to keep export-history metadata in Forge hosted storage, and <code>report:personal-data</code> to handle Atlassian privacy deletion and refresh instructions.</li>
-      <li>Files are created in the browser. Page content stays within Atlassian and your device.</li>
+      <li>Files are created in the browser. Table-cell content stays within Atlassian and your device.</li>
       <li>Forge history records contain metadata only, never table-cell content or exported files, and remain separated by app installation and signed-in account.</li>
       <li>The app follows Atlassian's security requirements for Marketplace apps.</li>
     </ul>
 
     <h2>Does an export app make it easier to take data out?</h2>
-    <p>It is a fair question, so here is the precise answer. The app reads only the page the user has open, as that user, with that user's own permissions. It cannot search, list or read other pages, reach a whole space, or send content to a vendor server. The additional <code>storage:app</code> permission stores only export-history metadata inside Atlassian Forge. Everything the app can read, the user can already see on screen, copy into Excel, or export through Confluence. If your policy is that content must not leave Confluence, use page and space permissions and Atlassian's data security policies, which can block this app in named spaces.</p>
+    <p>It is a fair question, so here is the precise answer. In its current workflow, the app requests the page the user has open and does not enumerate or search the site. The <code>read:page:confluence</code> permission technically allows it to read pages that the signed-in user may access. It does not send page content to a vendor server. The additional <code>storage:app</code> permission stores export-history metadata inside Atlassian Forge. If your policy is that content must not leave Confluence, use page and space permissions and Atlassian's data security policies, which can block this app in named spaces.</p>
 
     <h2>Scope</h2>
     <p>This policy covers the TableFlow: Excel & CSV Export for Confluence app, this website (toosolv.github.io) and the address contact@toosolv.com. It does not cover Atlassian's own platform, Confluence Cloud or the Atlassian Marketplace; please report those through <a href="https://bugcrowd.com/atlassian">Atlassian's own vulnerability programme</a>.</p>
