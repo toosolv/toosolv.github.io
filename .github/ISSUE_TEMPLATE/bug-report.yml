@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a reproducible problem with TableFlow
+description: Report a reproducible problem with TableCrate
 title: "[Bug] "
 labels:
   - bug
@@ -30,7 +30,7 @@ body:
     id: actual
     attributes:
       label: Actual result
-      description: Include the TableFlow error reference if one was shown.
+      description: Include the TableCrate error reference if one was shown.
     validations:
       required: true
   - type: textarea
