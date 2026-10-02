@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>Security policy · TableFlow: Excel & CSV Export for Confluence</title>
-  <meta name="description" content="Security policy of TableFlow: Excel & CSV Export for Confluence: how the app is built and how to report a vulnerability to TooSolv Studio.">
+  <title>Security policy · TableCrate: Excel & CSV Export for Confluence</title>
+  <meta name="description" content="Security policy of TableCrate: Excel & CSV Export for Confluence: how the app is built and how to report a vulnerability to TooSolv Studio.">
   <link rel="icon" href="../toosolv-studio.png?v=20260926">
   <link rel="stylesheet" href="../style.css?v=20260923c">
 </head>
@@ -40,13 +40,13 @@
     <p>It is a fair question, so here is the precise answer. In its current workflow, the app requests the page the user has open and does not enumerate or search the site. The <code>read:page:confluence</code> permission technically allows it to read pages that the signed-in user may access. It does not send page content to a vendor server. The additional <code>storage:app</code> permission stores export-history metadata inside Atlassian Forge. If your policy is that content must not leave Confluence, use page and space permissions and Atlassian's data security policies, which can block this app in named spaces.</p>
 
     <h2>Scope</h2>
-    <p>This policy covers the TableFlow: Excel & CSV Export for Confluence app, this website (toosolv.github.io) and the address contact@toosolv.com. It does not cover Atlassian's own platform, Confluence Cloud or the Atlassian Marketplace; please report those through <a href="https://bugcrowd.com/atlassian">Atlassian's own vulnerability programme</a>.</p>
+    <p>This policy covers the TableCrate: Excel & CSV Export for Confluence app, this website (toosolv.github.io) and the address contact@toosolv.com. It does not cover Atlassian's own platform, Confluence Cloud or the Atlassian Marketplace; please report those through <a href="https://bugcrowd.com/atlassian">Atlassian's own vulnerability programme</a>.</p>
 
     <h2>Safe harbour</h2>
     <p>If you report a vulnerability in good faith, keep to the scope above, do not access, change or delete data that is not yours, and give us reasonable time before making details public, we will not take legal action against you and will treat your report as authorised research.</p>
 
     <h2>Report a vulnerability</h2>
-    <p>Please email <a href="mailto:contact@toosolv.com?subject=Security%20report%3A%20TableFlow">contact@toosolv.com</a> with the subject "Security report". Include the steps to reproduce and the impact you see. Please do not share details publicly until a fix is released.</p>
+    <p>Please email <a href="mailto:contact@toosolv.com?subject=Security%20report%3A%20TableCrate">contact@toosolv.com</a> with the subject "Security report". Include the steps to reproduce and the impact you see. Please do not share details publicly until a fix is released.</p>
 
     <h2>What happens next</h2>
     <ul>
