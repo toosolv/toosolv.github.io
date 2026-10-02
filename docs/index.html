@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; script-src 'none'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>Documentation · TableFlow: Excel & CSV Export for Confluence</title>
-  <meta name="description" content="User guide for TableFlow: Excel & CSV Export for Confluence: export tables to Excel or CSV, sheet names, number rules, limits, keyboard and troubleshooting.">
+  <title>Documentation · TableCrate: Excel & CSV Export for Confluence</title>
+  <meta name="description" content="User guide for TableCrate: Excel & CSV Export for Confluence: export tables to Excel or CSV, sheet names, number rules, limits, keyboard and troubleshooting.">
   <link rel="icon" href="../toosolv-studio.png?v=20260926">
   <link rel="stylesheet" href="../style.css?v=20260923c">
 </head>
@@ -56,7 +56,7 @@
     <ul>
       <li>CSV stores one table as plain data. The CSV format cannot store colours, borders, merged cells, column widths or multiple sheets. Choose Excel when the layout matters.</li>
       <li>The file uses UTF-8 with a byte order mark so that Excel recognises umlauts and other Unicode characters. Line breaks, quotes and the selected comma or semicolon separator are escaped according to CSV rules.</li>
-      <li>Excel may display a general possible-data-loss warning when a CSV file is open. This warning describes the limits of CSV; it does not mean that TableFlow lost a table value.</li>
+      <li>Excel may display a general possible-data-loss warning when a CSV file is open. This warning describes the limits of CSV; it does not mean that TableCrate lost a table value.</li>
       <li><code>#######</code> means that Excel made a column too narrow. Widen the column or use the Excel export, which stores calculated column widths. The underlying CSV value is still present.</li>
     </ul>
     <div class="table-scroll" tabindex="0" role="region" aria-label="Table">
@@ -97,8 +97,8 @@
     </div>
 
     <h2>For administrators</h2>
-    <p><strong>Who we are.</strong> TableFlow: Excel & CSV Export for Confluence is built and supported by TooSolv Studio, a small independent software studio based in Germany. Contact details and postal address are in our <a href="../impressum/">legal notice</a>.</p>
-    <p><strong>What the app can reach.</strong> In its current workflow, TableFlow requests the page or blog post the signed-in user has open and does not enumerate or search the site. The <code>read:page:confluence</code> permission technically allows page reads within that user's existing permissions. The app does not request attachments. The <code>storage:app</code> permission stores export-history metadata in Atlassian Forge. The <code>report:personal-data</code> permission lets TableFlow report accounts with stored history and act on Atlassian deletion or refresh instructions. TooSolv Studio operates no external app server.</p>
+    <p><strong>Who we are.</strong> TableCrate: Excel & CSV Export for Confluence is built and supported by TooSolv Studio, a small independent software studio based in Germany. Contact details and postal address are in our <a href="../impressum/">legal notice</a>.</p>
+    <p><strong>What the app can reach.</strong> In its current workflow, TableCrate requests the page or blog post the signed-in user has open and does not enumerate or search the site. The <code>read:page:confluence</code> permission technically allows page reads within that user's existing permissions. The app does not request attachments. The <code>storage:app</code> permission stores export-history metadata in Atlassian Forge. The <code>report:personal-data</code> permission lets TableCrate report accounts with stored history and act on Atlassian deletion or refresh instructions. TooSolv Studio operates no external app server.</p>
     <p><strong>Does an export app make it easier to take data out?</strong> It is a fair question, so here is the precise answer. Everything the app can read, the user can already see on screen, select, copy and paste into Excel, or take out with Confluence's own Export to Word and Export to PDF. The app makes that route cleaner, not wider. If your policy is that certain content must not leave Confluence, the controls that work are the ones you already have: page and space permissions, and Atlassian's data security policies, which can block this app in named spaces.</p>
     <p><strong>Restricting the app.</strong> You can block it in individual spaces with Atlassian's data security policies (Administration, Security, Data security policies, App access rules). You can also uninstall it per site.</p>
     <p><strong>Audit.</strong> The export history belongs to the signed-in account and records date, file name, format, table names, the source page identifier and stable Confluence table identifiers when available. It is a user convenience, not an administrator audit log. The app does not write page or table content to server-side application logs; technical errors can appear locally in the browser console. If you need an organisation-wide audit record, use Confluence's own audit log and page analytics.</p>
