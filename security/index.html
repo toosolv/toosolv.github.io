@@ -8,12 +8,13 @@
   <title>Security policy · TableCrate: Excel & CSV Export for Confluence</title>
   <meta name="description" content="Security policy of TableCrate: Excel & CSV Export for Confluence: how the app is built and how to report a vulnerability to TooSolv Studio.">
   <link rel="icon" href="../toosolv-studio.png?v=20260926">
-  <link rel="stylesheet" href="../style.css?v=20260923c">
+  <link rel="stylesheet" href="../style.css?v=20261015a">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="wrap">
   <header class="site">
-    <img src="../toosolv-studio.png?v=20260926" alt="">
+    <img src="../toosolv-studio.webp?v=20260926" alt="">
     <a href="../">TooSolv Studio</a>
     <nav aria-label="Main">
       <a href="../docs/">Documentation</a>
@@ -23,7 +24,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <h1>Security policy</h1>
     <p class="lead">How we keep the app secure and how to report a vulnerability.</p>
 
@@ -32,7 +33,7 @@
       <li>The app is built on Atlassian Forge. TooSolv Studio operates no external app servers.</li>
       <li>It requests <code>read:page:confluence</code> to read the open page, <code>storage:app</code> to keep export-history metadata in Forge hosted storage, and <code>report:personal-data</code> to handle Atlassian privacy deletion and refresh instructions.</li>
       <li>Files are created in the browser. Table-cell content stays within Atlassian and your device.</li>
-      <li>Forge history records contain metadata only, never table-cell content or exported files, and remain separated by app installation and signed-in account. Active history is limited to 200 entries and 5 MB per account; users can clear it. Technical cleanup markers are separate from this limit, as explained in the privacy policy.</li>
+      <li>Forge history records contain metadata only, never table-cell content or exported files, and remain separated by app installation and signed-in account. Active history is limited to 200 entries and 5 MB per account; users can clear it while the app is accessible with a valid license. For requests after license expiry, see <a href="../privacy/#privacy-requests">access and deletion requests</a>. Technical cleanup markers are separate from this limit, as explained in the privacy policy.</li>
       <li>The app follows Atlassian's security requirements for Marketplace apps.</li>
     </ul>
 

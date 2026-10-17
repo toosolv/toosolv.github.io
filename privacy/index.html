@@ -8,12 +8,13 @@
   <title>Privacy policy · TableCrate: Excel & CSV Export for Confluence</title>
   <meta name="description" content="Privacy policy of TableCrate: Excel & CSV Export for Confluence by TooSolv Studio: table cells stay in the browser and export-history metadata is stored in Atlassian Forge.">
   <link rel="icon" href="../toosolv-studio.png?v=20260926">
-  <link rel="stylesheet" href="../style.css?v=20260923c">
+  <link rel="stylesheet" href="../style.css?v=20261015a">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="wrap">
   <header class="site">
-    <img src="../toosolv-studio.png?v=20260926" alt="">
+    <img src="../toosolv-studio.webp?v=20260926" alt="">
     <a href="../">TooSolv Studio</a>
     <nav aria-label="Main">
       <a href="../docs/">Documentation</a>
@@ -23,15 +24,15 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <h1>Privacy policy</h1>
-    <p class="lead">Last updated: 1 October 2026</p>
+    <p class="lead">Last updated: 16 October 2026</p>
 
     <h2>Who we are</h2>
     <p>TableCrate: Excel & CSV Export for Confluence ("the app") is provided by TooSolv Studio, Ryan-Jamil Rezgaoui (postal address in our <a href="../impressum/">legal notice</a>). Contact: <a href="mailto:contact@toosolv.com">contact@toosolv.com</a>. TooSolv Studio is responsible for the app's processing of personal data described in this policy; Atlassian is responsible for its own platform processing under Atlassian's privacy terms.</p>
 
     <h2>Summary</h2>
-    <p>Page and table content stays in your browser. Table cells and generated files are not stored. Atlassian Forge keeps up to 200 export-history metadata entries and up to 5 MB of active history metadata per account; older entries are removed automatically, and you can clear the history at any time. TooSolv Studio operates no external server for the app.</p>
+    <p>Page and table content stays in your browser. Table cells and generated files are not stored. Atlassian Forge keeps up to 200 export-history metadata entries and up to 5 MB of active history metadata per account; older entries are removed automatically, and you can clear the history while the app is accessible with a valid license. TooSolv Studio operates no external server for the app.</p>
 
     <h2>What the app does with your data</h2>
     <ul>
@@ -45,11 +46,11 @@
     </ul>
 
     <h2>Data stored in your browser and Atlassian Forge</h2>
-    <p>The app stores your quick-start completion, app-language choice, display-theme choice, Excel number-format choice and CSV-separator choice in local browser storage. Forge keeps up to 200 export-history metadata entries and up to 5 MB of active history metadata per account: export date and time, file name, format and delivery mode, included table names, the source page identifier and stable Confluence table identifiers when available. Older entries are removed automatically. A one-way hash of your Atlassian account identifier keeps each account's history separate. Neither table-cell content nor an exported file is stored. During migration or a temporary Forge failure, unsent history metadata can remain in the browser until Forge accepts it. The app sets no cookies. The exported file is saved to your device only when you select Export. The clipboard is used only when you select "Copy details" yourself.</p>
+    <p>The app stores your quick-start completion, app-language choice, display-theme choice and CSV-separator choice in local browser storage. Forge keeps up to 200 export-history metadata entries and up to 5 MB of active history metadata per account: export date and time, file name, format and delivery mode, included table names, the source page identifier and stable Confluence table identifiers when available. Older entries are removed automatically. A one-way hash of your Atlassian account identifier separates history in Forge. Local browser history and recovery keys include the raw account identifier to keep accounts separate. The Excel number format applies only to the current window and is not saved as a browser preference. Neither table-cell content nor an exported file is stored. Before each history write, the app temporarily saves unsent history metadata in the browser so it can recover after an interrupted request. This local recovery buffer is limited to 200 entries and 5 MB. Confirmed entries are removed from the buffer. Interrupted writes are retried while the app is open and when it is reopened. If an older recovery entry cannot safely be assigned to the current history after a deletion, it remains in the browser with a notice instead of being automatically uploaded. Export again to create a fresh entry. Clear history removes the entire account history across devices; it is not a selective cleanup of local recovery entries. If browser storage is unavailable or full, the app warns when a failed history write cannot be recovered. No table-cell content or exported file is stored in this buffer. Technical browser coordination markers, whose keys include the account identifier, may remain after Clear history. Current coordination markers do not contain table names or file names. Deletion operations use random operation identifiers, a heartbeat and server generation markers. If the originating window closes, a later successful server contact from a current app window reconciles the outcome when the required coordination markers are available; an unconfirmed abandoned operation is cancelled without deleting newer history. If an older app version is used again after an update, its recovery acknowledgements can retain history metadata in that browser. Clearing the app’s browser storage removes those local leftovers. The app sets no cookies. The exported file is saved to your device only when you select Export. The clipboard is used only when you select "Copy details" yourself.</p>
     <p>A separate Forge privacy record keeps your Atlassian account identifier and its reporting timestamp solely for Atlassian's Privacy API. An hourly Forge task checks which accounts are due for reporting. It follows the reporting interval returned by Atlassian, with seven days as the default. If Atlassian reports that an account has been closed, TableCrate deletes that account's history and privacy record. Selecting <strong>Clear history</strong> also removes the related privacy record once deletion is complete.</p>
 
     <h2>Retention and deletion</h2>
-    <p>Forge keeps at most 200 export-history entries and at most 5 MB (5,000,000 bytes) of active history metadata per account. The byte budget includes storage keys, record data and table-identifier chunks. Entries beyond either limit are removed, so fewer than 200 entries may remain. Clearing the history removes every remaining history record for your account in that app installation; files already downloaded to your device remain unchanged. If the app is uninstalled, Atlassian retains Forge hosted app data for 28 days under its platform lifecycle and then removes it. TooSolv Studio keeps no separate copy.</p>
+    <p>Forge keeps at most 200 export-history entries and at most 5 MB (5,000,000 bytes) of active history metadata per account. The byte budget includes storage keys, record data and table-identifier chunks. Entries beyond either limit are removed, so fewer than 200 entries may remain. Clearing the history removes every remaining history record for your account in that app installation; files already downloaded to your device remain unchanged. After license expiry the app menu may be unavailable; your administrator can uninstall the app. If the app is uninstalled, Atlassian retains Forge hosted app data for 28 days under its platform lifecycle and then removes it. TooSolv Studio keeps no separate copy.</p>
     <p>These limits cover active history metadata, not the entire installation storage. Technical account-state and cleanup markers, linked to a hashed account identifier, may remain to prevent old records from reappearing and to continue interrupted deletion. They contain no table-cell content or exported files. Physical cleanup may finish later after a temporary storage failure; clearing history immediately invalidates its active records.</p>
 
     <h2>Atlassian</h2>
@@ -84,7 +85,11 @@
     <p>This website is hosted by GitHub Pages (GitHub, Inc., USA). When you visit it, GitHub processes technical data such as your IP address in server logs to deliver the page and keep it secure. Legal basis: Art. 6(1)(f) GDPR (our legitimate interest in a secure, reachable website). GitHub is certified under the EU-US Data Privacy Framework, which covers the transfer to the USA. How long GitHub keeps these logs is described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. This website sets no cookies and uses no tracking.</p>
 
     <h2>Your rights</h2>
-    <p>You have the right to access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object to processing based on legitimate interests (Art. 21). You also have the right to lodge a complaint with a data protection supervisory authority. The app sends no personal data to TooSolv Studio. You can erase the app's export history with <strong>Clear history</strong>. For other data held by Atlassian, contact your Confluence administrator or Atlassian. Questions about this policy: <a href="mailto:contact@toosolv.com">contact@toosolv.com</a></p>
+    <p>You have the right to access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object to processing based on legitimate interests (Art. 21). You also have the right to lodge a complaint with a data protection supervisory authority. You can erase the app's export history with <strong>Clear history</strong> while the app is accessible with a valid license. For account or platform data controlled by Atlassian, contact your Confluence administrator or Atlassian. Questions about this policy: <a href="mailto:contact@toosolv.com">contact@toosolv.com</a></p>
+
+    <h2 id="privacy-requests">Access and deletion requests</h2>
+    <p>Email <a href="mailto:contact@toosolv.com?subject=TableCrate%20privacy%20request">contact@toosolv.com</a> to request access to or deletion of personal data associated with TableCrate, including after your app license has expired. State your request and the Confluence site concerned; do not send table contents, exported files, passwords or API tokens. We may ask for the information needed to verify your identity and coordinate with your site administrator or Atlassian where platform action is required.</p>
+    <p>We respond without undue delay and normally within one month. If a lawful extension is needed because of complexity or the number of requests, we explain it within that first month. License expiry alone does not delete stored history. Clearing site data in your browser removes local preferences and recovery data for that browser, but does not delete Forge history, another browser's data or files you downloaded. Contact us before clearing browser data if an interrupted history write needs investigation.</p>
 
     <h2>Changes</h2>
     <p>This policy is updated before a release changes what the app reads, stores, sends or retains.</p>

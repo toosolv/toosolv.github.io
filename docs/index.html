@@ -8,12 +8,13 @@
   <title>Documentation · TableCrate: Excel & CSV Export for Confluence</title>
   <meta name="description" content="User guide for TableCrate: Excel & CSV Export for Confluence: export tables to Excel or CSV, sheet names, number rules, limits, keyboard and troubleshooting.">
   <link rel="icon" href="../toosolv-studio.png?v=20260926">
-  <link rel="stylesheet" href="../style.css?v=20260923c">
+  <link rel="stylesheet" href="../style.css?v=20261015a">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="wrap">
   <header class="site">
-    <img src="../toosolv-studio.png?v=20260926" alt="">
+    <img src="../toosolv-studio.webp?v=20260926" alt="">
     <a href="../">TooSolv Studio</a>
     <nav aria-label="Main">
       <a href="./" aria-current="page">Documentation</a>
@@ -23,7 +24,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <h1>User guide</h1>
     <p class="lead">Export tables from Confluence to Excel or CSV in three steps.</p>
 
@@ -59,7 +60,7 @@
       <li>Excel may display a general possible-data-loss warning when a CSV file is open. This warning describes the limits of CSV; it does not mean that TableCrate lost a table value.</li>
       <li><code>#######</code> means that Excel made a column too narrow. Widen the column or use the Excel export, which stores calculated column widths. The underlying CSV value is still present.</li>
     </ul>
-    <div class="table-scroll" tabindex="0" role="region" aria-label="Table">
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Keyboard shortcuts">
       <table>
         <caption class="sr-only">Keyboard shortcuts</caption>
         <thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead>
@@ -74,11 +75,15 @@
       </table>
     </div>
 
+    <h2>History, search and limits</h2>
+    <p>Search filters the table list. A selected table hidden by the search remains selected and is included in the export. History contains metadata for up to 200 exports and 5 MB per account in this app installation; it stores no table cells or exported files. Repeat export reads the current page again and requires a matching stable table identifier. Settings also controls the interface language and light or dark theme.</p>
+    <p>The page limit is 200,000 cells and 500 tables. Macro-loaded tables, images of tables and attached spreadsheets are not included. Large or unreadable tables produce a warning. Excel preserves merged cells; CSV cannot store merges, styles or multiple sheets. See <a href="../privacy/#privacy-requests">access and deletion requests</a> if the app is inaccessible after license expiry.</p>
+
     <h2>Languages</h2>
-    <p>The app follows your Confluence language. Supported languages: English, German, French, Spanish and Japanese.</p>
+    <p>The app initially follows your Confluence language. In Settings you can choose English, German, French, Spanish or Japanese for the app interface.</p>
 
     <h2>Troubleshooting</h2>
-    <div class="table-scroll" tabindex="0" role="region" aria-label="Table">
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Troubleshooting">
       <table>
         <caption class="sr-only">Troubleshooting</caption>
         <thead><tr><th scope="col">You see</th><th scope="col">What to do</th></tr></thead>
@@ -108,7 +113,7 @@
     <p><strong>Trial and cancellation.</strong> Atlassian gives every paid app a free trial; its length and terms are set by Atlassian and shown on the pricing tab of our listing. When a licence ends, the menu entry disappears and the app cannot be used. Downloaded files remain on users' devices. After uninstall, Atlassian retains Forge hosted app data for 28 days under its platform lifecycle; TooSolv Studio keeps no separate copy.</p>
 
     <h2>Privacy</h2>
-    <p>The page is read in your browser with your own permissions. No page content is sent to or stored by the vendor. Your interface preferences are saved locally in your browser. Atlassian Forge keeps up to 200 export-history metadata entries and up to 5 MB of active history metadata per account; older entries are removed automatically, and you can clear the history at any time. The metadata includes the export date, file name, format, included table names, source page identifier and stable Confluence table identifiers when available, but never table-cell content or the exported file. We receive only plain counters that say an export ran, never what was in it. See the <a href="../privacy/">privacy policy</a>.</p>
+    <p>The page is read in your browser with your own permissions. No page content is sent to or stored by the vendor. Your interface preferences are saved locally in your browser. Atlassian Forge keeps up to 200 export-history metadata entries and up to 5 MB of active history metadata per account; older entries are removed automatically, and you can clear the history while the app is accessible with a valid license. The metadata includes the export date, file name, format, included table names, source page identifier and stable Confluence table identifiers when available, but never table-cell content or the exported file. We receive only plain counters that say an export ran, never what was in it. See the <a href="../privacy/">privacy policy</a>.</p>
     <p>If you select <strong>Help</strong> in an error message, your browser opens this documentation page, which is hosted by GitHub. Nothing about your Confluence page is sent with it.</p>
 
     <h2>Open source</h2>
@@ -122,7 +127,7 @@
       because your tables stay in Confluence.</p>
 
     <h2>Support</h2>
-    <p>See the <a href="../support/">support page</a> for contact options, business hours, response targets and the public issue tracker.</p>
+    <p>See the <a href="../support/">support page</a> for email contact and response targets.</p>
   </main>
 
   <footer class="site-footer"><div class="footer-inner"><span class="copyright">© 2026 TooSolv Studio</span><nav class="footer-links" aria-label="Footer"><a href="/docs/">Documentation</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/security/">Security</a><a href="/impressum/">Legal notice</a><a href="/connect/">Connect users</a><a href="mailto:contact@toosolv.com">Contact</a></nav></div><p class="footer-trademark">Microsoft and Excel are trademarks of the Microsoft group of companies. Atlassian and Confluence are trademarks of Atlassian.</p></footer>
